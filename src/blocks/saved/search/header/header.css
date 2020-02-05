@@ -1,0 +1,26 @@
+.search.saved{
+  background: #FFFFFF;
+  color: #1A1B22;
+  border-bottom: 1px solid #D1D2D6;
+
+  background-image: none;
+}
+.black{
+  color: #1A1B22;
+}
+
+.header__main-saved{
+  border: 0;
+}
+.header__saved_articles-saved{
+  font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 64px;
+  height: 100%;
+  border-bottom: 3px solid #1A1B22;
+}
+.header__name_menu-saved{
+  border: 1px solid #D1D2D6;
+}

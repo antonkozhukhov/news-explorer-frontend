@@ -1,0 +1,13 @@
+.or_registration{
+  margin: auto;
+  align-items: center;
+  text-align: center;
+}
+.or_registration_link{
+  text-decoration: none;
+}
+
+.form__enter{
+  display: none;
+}
+

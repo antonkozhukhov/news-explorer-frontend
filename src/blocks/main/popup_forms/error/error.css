@@ -1,0 +1,16 @@
+.error_valid{
+  margin-top: 3px;
+  margin-bottom: 13px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: #FF0000;
+}
+.error_valid__registration{
+  text-align: center;
+  margin: auto;
+  margin-bottom: -34px;
+  margin-top: 17px;
+}

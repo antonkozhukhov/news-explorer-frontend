@@ -1,0 +1,29 @@
+.popup__button{
+  padding: 0;
+  width: 358px;
+  height: 64px;
+  border-radius: 100px;
+  background: #E6E8EB;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 39px auto 16px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  border: thick;
+  color: #B6BCBF;
+  justify-content: space-evenly;
+}
+@media (max-width :520px){
+.popup__button{
+  width: 300px;
+}
+}
+@media (max-width :320px) {
+.popup__button{
+  width: 89%;
+}
+}
