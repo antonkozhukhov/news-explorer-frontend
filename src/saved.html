@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.saved.css %>">
 
 
+
     <title>Поиск новостей</title>
 </head>
 <body>
@@ -19,12 +20,12 @@
 
                 <div class="header__name_menu header__name_menu-saved saved">
                   <a href="./saved.html" class="header__name  black">Антон</a>
-                   <a href="./saved.html" class="header__name-icon"><img src="<%=require('./images/logout-black.png').default%>"/></a>
+                   <a href="./saved.html" class="header__name-icon"><img  alt="иконка выхода"src="<%=require('./images/logout-black.png').default%>"/></a>
 
                   </div>
 
             </div>
-            <img src = "<%=require('./images/mobile/menu.png').default%>" class="header__menu_mobile-img">
+            <img src = "<%=require('./images/mobile/menu.png').default%>" alt="иконка меню" class="header__menu_mobile-img">
         </header>
         <div class="search_menu search_menu_saved">
           <h3 class="search_menu_saved-uppersubtitle"> Сохраненные статьи </h3>
@@ -42,7 +43,7 @@
             <h3 class="article__icon_name">Природа</h3>
             <h3 class="article__icon_delete">Убрать из сохраненных</h3>
             <div  class="article__icon_save article__icon_save-saved"></div>
-            <img src="<%=require('./images/image_08.png').default%>" class="article__pic"   alt="здесь должна быть картинка">
+            <img src="<%=require('./images/image_08.png').default%>" class="article__pic"   alt="картинка из статьи">
             <p class="article__date">2 августа, 2019</p>
             <p class="article__title">Национальное достояние – парки</p>
             <p class="article__content">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
@@ -50,7 +51,7 @@
             <p class="article__source">Лента.ру</p>
           </div>
           <div class="article">
-            <img src="<%=require('./images/image_08.png').default%>" class="article__pic"   alt="здесь должна быть картинка">
+            <img src="<%=require('./images/image_08.png').default%>" class="article__pic"   alt="картинка из статьи">
             <p class="article__date">2 августа, 2019</p>
             <p class="article__title">Национальное достояние – парки</p>
             <p class="article__content">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
@@ -58,7 +59,7 @@
             <p class="article__source">Лента.ру</p>
           </div>
           <div class="article">
-            <img src="<%=require('./images/image_08.png').default%>" class="article__pic"   alt="здесь должна быть картинка">
+            <img src="<%=require('./images/image_08.png').default%>" class="article__pic"   alt="картинка из статьи">
             <p class="article__date">2 августа, 2019</p>
             <p class="article__title">Национальное достояние – парки</p>
             <p class="article__content">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
@@ -66,7 +67,7 @@
             <p class="article__source">Лента.ру</p>
           </div>
           <div class="article">
-            <img src="<%=require('./images/image_08.png').default%>" class="article__pic"   alt="здесь должна быть картинка">
+            <img src="<%=require('./images/image_08.png').default%>" class="article__pic"   alt="картинка из статьи">
             <p class="article__date">2 августа, 2019</p>
             <p class="article__title">Национальное достояние – парки</p>
             <p class="article__content">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
@@ -75,7 +76,7 @@
           </div>
           <div class="article">
 
-            <img src="<%=require('./images/image_08.png').default%>" class="article__pic"   alt="здесь должна быть картинка">
+            <img src="<%=require('./images/image_08.png').default%>" class="article__pic"   alt="картинка из статьи">
             <p class="article__date">2 августа, 2019</p>
             <p class="article__title">Национальное достояние – парки</p>
             <p class="article__content">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
@@ -95,8 +96,8 @@
               <a href="https://praktikum.yandex.ru/" class="footer__info-yapracticum" target="_blank">Яндекс.Практикум</a>
             </div>
             <div class="footer__icons">
-              <a href="https://github.com/antonkozhukhov/"class="footer__icon" target="_blank"><img   src="<%=require('./images/github.png').default%>"/></a>
-              <a href="https://www.facebook.com/anton.kozhukhov/"class="footer__icon" target="_blank"><img href=""  src="<%=require('./images/fb.png').default%>"/></a>
+              <a href="https://github.com/antonkozhukhov/"class="footer__icon" target="_blank"><img alt="гитхаб"  src="<%=require('./images/github.png').default%>"/></a>
+              <a href="https://www.facebook.com/anton.kozhukhov/"class="footer__icon" target="_blank"><img alt="фейсбук"  src="<%=require('./images/fb.png').default%>"/></a>
             </div>
         </footer>
         <script src="<%= htmlWebpackPlugin.files.chunks.saved.entry %>"></script>
