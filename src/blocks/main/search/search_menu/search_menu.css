@@ -55,6 +55,9 @@
   border-radius: 100px;
   color: #B6BCBF;
 }
+.search_menu__input::placeholder{
+  border: none;
+}
 .search_menu__button{
   font-family: Roboto;
   font-style: normal;
