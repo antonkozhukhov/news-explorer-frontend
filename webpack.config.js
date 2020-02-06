@@ -47,7 +47,7 @@ module.exports = {
              {
                  loader: 'image-webpack-loader',
                  options:{
-                   publicPath:'./images',}
+                   publicPath: path.resolve(__dirname, './'),}
 
                  },
         ],
