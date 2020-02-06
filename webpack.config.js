@@ -41,7 +41,7 @@ module.exports = {
       },
 
        {
-        test: /\.(png|jpg|gif|ico|svg)$/,
+        test: /\.(svg|jpg|gif|ico|png)$/,
         use: [
              'file-loader?name=./images/[name].[ext]', // указали папку, куда складывать изображения
              {
