@@ -46,8 +46,7 @@ module.exports = {
              'file-loader?name=./images/[name].[ext]', // указали папку, куда складывать изображения
              {
                  loader: 'image-webpack-loader',
-                 options:{
-                  esModule: false,}
+
 
                  },
         ],
