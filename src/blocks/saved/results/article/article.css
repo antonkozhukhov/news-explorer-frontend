@@ -27,7 +27,6 @@
   padding: 8px 12px ;
   text-align: center;
   color: #000000;
-
 }
 .article__icon_save-saved{
   width: 40px;
@@ -39,19 +38,17 @@
   background-image: url(../../../../images/Group12-black.png);
 }
 @media (max-width :1300px) {
-  .article__icon_delete{
-
+.article__icon_delete{
   display: none;
-  }
-
+}
 }
 @media (max-width :790px) {
-  .article__icon_name{
-    left: 14px;
+.article__icon_name{
+  left: 14px;
   top: -5px;
-  }
-  .article__icon_save-saved{
-    right: 14px;
-top: 10px
-  }
+}
+.article__icon_save-saved{
+  right: 14px;
+  top: 10px
+}
 }

@@ -4,26 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.saved.css %>">
-
-
-
     <title>Поиск новостей</title>
 </head>
 <body>
-
   <section class="search saved">
         <header class="header saved">
           <p class="header__tittle black">NewsExplorer</p>
             <div class="header__menu  saved">
                 <a href="./index.html" class="header__main header__main-saved black">Главная</a>
                 <a href="./saved.html" class="header__saved_articles header__saved_articles-saved black">Сохраненные статьи</a>
-
                 <div class="header__name_menu header__name_menu-saved saved">
                   <a href="./saved.html" class="header__name  black">Антон</a>
-                   <a href="./saved.html" class="header__name-icon"><img  alt="иконка выхода"src="<%=require('./images/logout-black.png').default%>"/></a>
-
-                  </div>
-
+                  <a href="./saved.html" class="header__name-icon"><img  alt="иконка выхода"src="<%=require('./images/logout-black.png').default%>"/></a>
+                 </div>
             </div>
             <img src = "<%=require('./images/mobile/menu.png').default%>" alt="иконка меню" class="header__menu_mobile-img">
         </header>
@@ -31,19 +24,15 @@
           <h3 class="search_menu_saved-uppersubtitle"> Сохраненные статьи </h3>
           <h2 class="search_menu__tittle black search_menu__tittle-saved">Грета, у вас 5 сохранённых статей</h2>
           <p class="search_menu__subtittle black search_menu__subtittle-saved">По ключевым словам: <span class="bold">Природа, Тайга</span> и <span class="bold">2 другим</span>  </p>
-
         </div>
   </section>
-
-
   <section class="results">
-
         <div class="table">
           <div class="article">
             <h3 class="article__icon_name">Природа</h3>
             <h3 class="article__icon_delete">Убрать из сохраненных</h3>
             <div  class="article__icon_save article__icon_save-saved"></div>
-            <img src="<%=require('./images/image_08.png').default%>" class="article__pic"   alt="картинка из статьи">
+            <img src="<%=require('./images/image_08.png').default%>" class="article__pic" alt="картинка из статьи">
             <p class="article__date">2 августа, 2019</p>
             <p class="article__title">Национальное достояние – парки</p>
             <p class="article__content">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
@@ -75,7 +64,6 @@
             <p class="article__source">Лента.ру</p>
           </div>
           <div class="article">
-
             <img src="<%=require('./images/image_08.png').default%>" class="article__pic"   alt="картинка из статьи">
             <p class="article__date">2 августа, 2019</p>
             <p class="article__title">Национальное достояние – парки</p>
@@ -84,23 +72,19 @@
             <p class="article__source">Лента.ру</p>
           </div>
          </div>
-
   </section>
-
-
-
-        <footer class="footer">
-            <p class=" footer__copyright">2020 Supercite</p>
-            <div class="footer__info">
-              <a href="index.html" class="footer__info-main">Главная</a>
-              <a href="https://praktikum.yandex.ru/" class="footer__info-yapracticum" target="_blank">Яндекс.Практикум</a>
-            </div>
-            <div class="footer__icons">
-              <a href="https://github.com/antonkozhukhov/"class="footer__icon" target="_blank"><img alt="гитхаб"  src="<%=require('./images/github.png').default%>"/></a>
-              <a href="https://www.facebook.com/anton.kozhukhov/"class="footer__icon" target="_blank"><img alt="фейсбук"  src="<%=require('./images/fb.png').default%>"/></a>
-            </div>
-        </footer>
-        <script src="<%= htmlWebpackPlugin.files.chunks.saved.entry %>"></script>
+  <footer class="footer">
+      <p class=" footer__copyright">2020 Supercite</p>
+      <div class="footer__info">
+        <a href="index.html" class="footer__info-main">Главная</a>
+        <a href="https://praktikum.yandex.ru/" class="footer__info-yapracticum" target="_blank">Яндекс.Практикум</a>
+      </div>
+      <div class="footer__icons">
+        <a href="https://github.com/antonkozhukhov/"class="footer__icon" target="_blank"><img alt="гитхаб"  src="<%=require('./images/github.png').default%>"/></a>
+        <a href="https://www.facebook.com/anton.kozhukhov/"class="footer__icon" target="_blank"><img alt="фейсбук"  src="<%=require('./images/fb.png').default%>"/></a>
+      </div>
+  </footer>
+  <script src="<%= htmlWebpackPlugin.files.chunks.saved.entry %>"></script>
 </body>
 </html>
 

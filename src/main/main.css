@@ -7,9 +7,6 @@
 @import url(../blocks/main/author/author.css);
 @import url(../blocks/main/after_results/after_results.css);
 
-
-
-
 @font-face {
   font-family: 'Roboto';
   font-style:  normal;
@@ -26,4 +23,8 @@
   font-family: 'Roboto Slab';
   font-style:  normal;
   src: url(../roboto/robotoslab-regular-webfont.woff) format("woff");
+}
+textarea:focus, input:focus, button:focus
+{
+  outline: none;
 }

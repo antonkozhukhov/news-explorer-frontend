@@ -2,8 +2,6 @@
   z-index: 4;
   background: #FFFFFF;
   color: #1A1B22;
-
-
   background-image: none;
 }
 header.saved{
@@ -12,16 +10,15 @@ header.saved{
 .black{
   color: #1A1B22;
 }
-
 .header__main-saved{
   border: 0;
 }
 .header__saved_articles-saved{
   font-family: Roboto;
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 64px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 64px;
   height: 100%;
   border-bottom: 3px solid #1A1B22;
 }
