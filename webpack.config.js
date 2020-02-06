@@ -43,11 +43,9 @@ module.exports = {
        {
         test: /\.(svg|jpg|gif|ico|png)$/,
         use: [
-             'file-loader?name=./images/[name].[ext]', // указали папку, куда складывать изображения
+             'file-loader?name=./images/[name].[ext]',
              {
                  loader: 'image-webpack-loader',
-
-
                  },
         ],
         }
