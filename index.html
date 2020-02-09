@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.03a09014f99a8d6e1340.css?cd3df1537525e87f3506">
+    <link rel="stylesheet" href="style.c1a1cdc74af650e6e9cb.css?fa535692a6aa62fc4bc7">
+    <link rel="stylesheet" href="./main/main.css">
     <title>Поиск новостей</title>
 </head>
 <body>
@@ -11,82 +12,82 @@
         <header class="header">
           <h1 class="header__tittle">NewsExplorer</h1>
           <div class="header__menu ">
-              <a href="./index.html" class="header__main  ">Главная</a>
-              <a href="./saved.html" class="header__saved_articles ">Сохраненные статьи</a>
+              <a href="./index.html" class="header__main">Главная</a>
+              <a href="./saved.html" class="header__saved-articles ">Сохраненные статьи</a>
               <a href="./index.html" class="header__auth">Авторизоваться</a>
-              <div class="header__name_menu ">
+              <div class="header__name-menu ">
                 <a href="./index.html" class="header__name">Антон</a>
                 <a href="./index.html" class="header__name-icon"><img alt="иконка выхода" src="./images/logout.png"/></a>
               </div>
           </div>
-          <img alt="иконка меню" src = "./images/menu_main.png" class="header__menu_mobile-img">
+          <img class="header__menu_mobile-img"  src = "./images/menu_main.png" alt="иконка меню">
         </header>
-        <div class="body_mobile">
+        <div class="body-mobile">
             <div class="mobile">
-                  <div class="header_mobile">
-                    <p class="header__tittle_mobile">NewsExplorer</p>
+                  <div class="mobile__header">
+                    <h1 class="header__tittle_mobile">NewsExplorer</h1>
                     <img src = "./images/back.png" alt="иконка меню" class="header__menu_mobile-img">
                   </div>
                   <div class="header__menu_mobile">
                     <a href="./index.html" class="header__main_mobile">Главная</a>
-                    <a href="./saved.html" class="header__saved_articles_mobile  ">Сохраненные статьи</a>
-                    <div class = "header__name_menu_mobile">
+                    <a href="./saved.html" class="header__saved-articles_mobile  ">Сохраненные статьи</a>
+                    <div class = "header__name-menu_mobile">
                       <a href="./index.html" class="header__name_mobile ">Антон </a>
                       <a href="./index.html" class="header__name-icon_mobile"><img alt="иконка выхода" src="./images/logout.png"/></a>
                     </div>
                   </div>
             </div>
         </div>
-        <div class="search_menu">
-          <p class="search_menu__tittle">Что в мире творится?</p>
-          <p class="search_menu__subtittle">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</p>
-          <form class="search_menu__form" name="search">
-            <input type="text" name="name"  class="search_menu__input" placeholder="Введите тему новости">
-            <button class="button search_menu__button">Искать</button>
+        <div class="search-menu">
+          <p class="search-menu__tittle">Что в мире творится?</p>
+          <p class="search-menu__subtittle">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</p>
+          <form class="search-menu__form" name="search">
+            <input type="text" name="name"  class="search-menu__input" placeholder="Введите тему новости">
+            <button class="button search-menu__button">Искать</button>
           </form>
         </div>
   </section>
-  <section class="popup_forms ">
-        <form class="form  form__enter " name="enter">
+  <section class="popup-forms">
+        <form class="form  form__enter" name="enter">
           <img alt="закрыть" src="./images/back.png" class="form__close">
           <h2 class="form__title">Вход</h2>
-          <h3 class="input_title">Email</h3>
-          <input type="text" name="email"  class="popup__input popup__input_type_email" placeholder="Введите почту">
-          <p class = "error_valid">Неправильный формат email </p>
-          <h3 class="input_title">Пароль</h3>
-          <input type="text" name="password"  class="popup__input popup__input_type_password" placeholder="Введите пароль">
-          <p class =  " error_valid">Неправильный формат пароля </p>
-          <button class="button popup__button " disabled >Войти</button>
-          <p class="or_registration">Или <a href="./index.html" class="or_registration_link">Зарегистрироваться</a></p>
+          <h3 class="input-title">Email</h3>
+          <input type="text" name="email"  class="form__input form__input_type-email" placeholder="Введите почту">
+          <p class = "error-valid">Неправильный формат email </p>
+          <h3 class="input-title">Пароль</h3>
+          <input type="text" name="password"  class="form__input form__input_type-password" placeholder="Введите пароль">
+          <p class =  "error-valid">Неправильный формат пароля </p>
+          <button class="button form__button " disabled >Войти</button>
+          <p class="or-registration">Или <a href="./index.html" class="or-registration__link">Зарегистрироваться</a></p>
       </form>
         <form class="form  form__registration " name="enter">
           <img alt="закрыть" src="./images/back.png" class="form__close">
           <h2 class="form__title">Регистрация</h2>
-          <h3 class="input_title">Email</h3>
-          <input type="text" name="email"  class="popup__input popup__input_type_email" placeholder="Введите почту">
-          <p class = "error_valid">Неправильный формат email</p>
-          <h3 class="input_title">Пароль</h3>
-          <input type="text" name="password"  class="popup__input popup__input_type_password" placeholder="Введите пароль">
-          <p  class =  " error_valid ">Неправильный формат пароля</p>
-          <h3 class="input_title">Имя</h3>
-          <input type="text" name="name"  class="popup__input popup__input_type_name" placeholder="Введите своё имя">
-          <p class = " error_valid a">Неправильный формат имени </p>
-          <p class = "error_valid error_valid__registration">Такой пользователь уже есть</p>
-          <button class="button popup__button " disabled >Зарегистрироваться</button>
-          <p class="or_registration">Или <a href="./index.html" class="or_registration_link"> Войти</a></p>
+          <h3 class="input-title">Email</h3>
+          <input type="text" name="email"  class="form__input form__input_type-email" placeholder="Введите почту">
+          <p class = "error-valid">Неправильный формат email</p>
+          <h3 class="input-title">Пароль</h3>
+          <input type="text" name="password"  class="form__input form__input_type-password" placeholder="Введите пароль">
+          <p  class =  " error-valid ">Неправильный формат пароля</p>
+          <h3 class="input-title">Имя</h3>
+          <input type="text" name="name"  class="form__input form__input_type-name" placeholder="Введите своё имя">
+          <p class = " error-valid a">Неправильный формат имени </p>
+          <p class = "error-valid error-valid__registration">Такой пользователь уже есть</p>
+          <button class="button form__button " disabled >Зарегистрироваться</button>
+          <p class="or-registration">Или <a href="./index.html" class="or-registration__link"> Войти</a></p>
         </form>
         <form class="form  registration-ok none" name="enter">
           <img alt="закрыть" src="./images/back.png" class="form__close">
           <h2 class="form__title">Пользователь успешно зарегистрирован!</h2>
-          <a href="./index.html" class="or_registration_link registration-ok__subtitle"> Выполнить вход</a>
+          <a href="./index.html" class="or-registration__link registration-ok__subtitle"> Выполнить вход</a>
         </form>
   </section>
   <section class="results">
         <p class="results__title">Результаты поиска</p>
         <div class="table">
           <div class="article">
-            <div  class="article__icon_save"></div>
-            <img src="./images/image_08.png" class="article__pic" alt="картинка из статьи">
+            <div  class="article__icon-save"></div>
+            <img class="article__pic" src="./images/image_08.png" alt="картинка из статьи">
             <p class="article__date">2 августа, 2019</p>
             <p class="article__title">Национальное достояние – парки</p>
             <p class="article__content">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
@@ -128,20 +129,20 @@
          </div>
     <div class="finding">
       <i class="finding__img"></i>
-      <h3 class="finding_subtitle">Идет поиск новостей...</h3>
+      <h3 class="finding__subtitle">Идет поиск новостей...</h3>
     </div>
-    <div class="nothing_not_found">
-      <img src = "./images/not-found_v1.png" class="nothing_not_found__img" alt="не найдено">
-      <h2 class="nothing_not_found__title">Ничего не найдено</h2>
-      <h3 class="nothing_not_found__subtitle">К сожалению по вашему запросу ничего не найдено.</h3>
+    <div class="nothing-not-found">
+      <img src = "./images/not-found_v1.png" class="nothing-not-found__img" alt="не найдено">
+      <h2 class="nothing-not-found__title">Ничего не найдено</h2>
+      <h3 class="nothing-not-found__subtitle">К сожалению по вашему запросу ничего не найдено.</h3>
     </div>
-    <button class="show_more">Показать ещё</button>
+    <button class="show-more">Показать ещё</button>
   </section>
   <section class="author">
-      <div class="author__photo" ><img src="./images/image-03.png " alt="фото автора" class="author__photo-img" > </div>
-      <div class="about_author">
-      <h2 class="about_author__title"> Об авторе</h2>
-      <p class="about_author__info"> Это блок с описанием автора проекта. Здесь следует указать,
+    <div class="author__photo" ><img src="./images/image-03.png " alt="фото автора" class="author__img" > </div>
+      <div class="author__about">
+      <h2 class="author__title"> Об авторе</h2>
+      <p class="author__info"> Это блок с описанием автора проекта. Здесь следует указать,
         как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.
         Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились,
         и чем можете помочь потенциальным заказчикам. </p>
@@ -158,7 +159,7 @@
               <a href="https://www.facebook.com/anton.kozhukhov/" class="footer__icon" target="_blank"><img alt="фейсбук" src="./images/fb.png" ></a>
             </div>
         </footer>
-      <script src="main/main.36b07943fbb518aa94fa.js?cd3df1537525e87f3506"></script>
+      <script src="main/main.36b07943fbb518aa94fa.js?fa535692a6aa62fc4bc7"></script>
 </body>
 </html>
 
