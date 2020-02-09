@@ -10,14 +10,14 @@
   <section class="search saved">
         <header class="header saved">
           <p class="header__tittle black">NewsExplorer</p>
-            <div class="header__menu  saved">
-                <a href="./index.html" class="header__main header__main-saved black">Главная</a>
-                <a href="./saved.html" class="header__saved-articles header__saved-articles-saved black">Сохраненные статьи</a>
-                <div class="header__name-menu header__name-menu-saved saved">
+            <ul class="header__menu  saved">
+                <li href="./index.html" class="header__main header__main-saved black">Главная</a>
+                <li href="./saved.html" class="header__saved-articles header__saved-articles-saved black">Сохраненные статьи</a>
+                <li class="header__name-menu header__name-menu-saved saved">
                   <a href="./saved.html" class="header__name  black">Антон</a>
                   <a href="./saved.html" class="header__name-icon"><img  alt="иконка выхода" src="<%=require('./images/logout-black.png').default%>"/></a>
                  </div>
-            </div>
+                </ul>
             <img src = "<%=require('./images/mobile/menu.png').default%>" alt="иконка меню" class="header__menu_mobile-img">
         </header>
         <div class="search-menu search-menu_saved">
@@ -75,13 +75,13 @@
   </section>
   <footer class="footer">
       <p class=" footer__copyright">2020 Supercite</p>
-      <div class="footer__info">
-        <a href="index.html" class="footer__info-main">Главная</a>
-        <a href="https://praktikum.yandex.ru/" class="footer__info-yapracticum" target="_blank">Яндекс.Практикум</a>
+      <ul class="footer__info">
+        <li href="index.html" class="footer__info-main">Главная</a>
+        <li href="https://praktikum.yandex.ru/" class="footer__info-yapracticum" target="_blank">Яндекс.Практикум</a>
       </div>
       <div class="footer__icons">
-        <a href="https://github.com/antonkozhukhov/" class="footer__icon" target="_blank"><img alt="гитхаб"  src="<%=require('./images/github.png').default%>"/></a>
-        <a href="https://www.facebook.com/anton.kozhukhov/" class="footer__icon" target="_blank"><img alt="фейсбук"  src="<%=require('./images/fb.png').default%>"/></a>
+        <a href="https://github.com/antonkozhukhov/" class="footer__icon" target="_blank"><picture alt="гитхаб"  src="<%=require('./images/github.png').default%>"/></a>
+        <a href="https://www.facebook.com/anton.kozhukhov/" class="footer__icon" target="_blank"><picture alt="фейсбук"  src="<%=require('./images/fb.png').default%>"/></a>
       </div>
   </footer>
   <script src="<%= htmlWebpackPlugin.files.chunks.saved.entry %>"></script>

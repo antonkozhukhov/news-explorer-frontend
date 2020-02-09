@@ -28,9 +28,10 @@
 textarea:focus, input:focus, button:focus
 {
   outline: none;
+  cursor: url(../images/lapka.png);
 }
 a:focus{
-  cursor: pointer;
+  cursor: url(../images/lapka.png);
 }
 body{
 max-width: 1440px;
