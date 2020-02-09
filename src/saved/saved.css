@@ -30,7 +30,12 @@ textarea:focus, input:focus, button:focus
   outline: none;
   cursor: url(../images/lapka.png);
 }
-a:focus{
+a{
+  text-decoration: none;
+  color: #FFFFFF;
+  cursor: url(../images/lapka.png);
+}
+a:hover{
   cursor: url(../images/lapka.png);
 }
 body{

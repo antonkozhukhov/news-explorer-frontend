@@ -39,8 +39,12 @@ textarea:hover, input:hover, button:hover, a:hover{
 a{
   text-decoration: none;
   color: #FFFFFF;
+  cursor: url(../images/lapka.png);
 }
 a:hover{
+  cursor: url(../images/lapka.png);
+}
+button{
   cursor: url(../images/lapka.png);
 }
 body{
