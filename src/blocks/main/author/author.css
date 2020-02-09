@@ -34,7 +34,7 @@
 @media (max-width :790px) {
 .author{
   margin: auto;
-  padding-top: 40px 40px;
+  padding-top: 40px;
   background: #FFFFFF;
   align-items: flex-start;
   display: flex;
@@ -79,6 +79,10 @@
   width: 100%;
   margin-right: 0;
   margin: auto;
+}
+.author__photo-img{
+  width: 100%;
+  height: 100%;
 }
 .about_author{
   margin-top: 0;

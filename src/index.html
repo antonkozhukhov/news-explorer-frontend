@@ -9,14 +9,14 @@
 <body>
   <section class="search">
         <header class="header">
-          <p class="header__tittle">NewsExplorer</p>
+          <h1 class="header__tittle">NewsExplorer</h1>
           <div class="header__menu ">
-              <a href="" class="header__main  ">Главная</a>
-              <a href="saved.html" class="header__saved_articles ">Сохраненные статьи</a>
-              <a href="" class="header__auth">Авторизоваться</a>
+              <a href="./index.html" class="header__main  ">Главная</a>
+              <a href="./saved.html" class="header__saved_articles ">Сохраненные статьи</a>
+              <a href="./index.html" class="header__auth">Авторизоваться</a>
               <div class="header__name_menu ">
-                <a href="" class="header__name">Антон</a>
-                <a href="" class="header__name-icon"><img alt="иконка выхода" src="%=require('./images/logout.png').default%"/></a>
+                <a href="./index.html" class="header__name">Антон</a>
+                <a href="./index.html" class="header__name-icon"><img alt="иконка выхода" src="<%=require('./images/logout.png').default%>"/></a>
               </div>
           </div>
           <img alt="иконка меню" src = "<%=require('./images/mobile/menu_main.png').default%>" class="header__menu_mobile-img">
@@ -42,7 +42,7 @@
           <p class="search_menu__subtittle">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</p>
           <form class="search_menu__form" name="search">
             <input type="text" name="name"  class="search_menu__input" placeholder="Введите тему новости">
-            <button type class="button search_menu__button">Искать</button>
+            <button class="button search_menu__button">Искать</button>
           </form>
         </div>
   </section>
@@ -52,33 +52,33 @@
           <h2 class="form__title">Вход</h2>
           <h3 class="input_title">Email</h3>
           <input type="text" name="email"  class="popup__input popup__input_type_email" placeholder="Введите почту">
-          <p id = "error-email" class = "error_valid">Неправильный формат email </p>
+          <p class = "error_valid">Неправильный формат email </p>
           <h3 class="input_title">Пароль</h3>
           <input type="text" name="password"  class="popup__input popup__input_type_password" placeholder="Введите пароль">
-          <p id = "error-password" class =  " error_valid">Неправильный формат пароля </p>
-          <button type class="button popup__button " disabled >Войти</button>
-          <p class="or_registration">Или <a href="" class="or_registration_link">Зарегистрироваться</a class></p>
+          <p class =  " error_valid">Неправильный формат пароля </p>
+          <button class="button popup__button " disabled >Войти</button>
+          <p class="or_registration">Или <a href="./index.html" class="or_registration_link">Зарегистрироваться</a></p>
       </form>
         <form class="form  form__registration " name="enter">
           <img alt="закрыть" src="<%=require('./images/back.png').default%>" class="form__close">
           <h2 class="form__title">Регистрация</h2>
           <h3 class="input_title">Email</h3>
           <input type="text" name="email"  class="popup__input popup__input_type_email" placeholder="Введите почту">
-          <p id = "error-email" class = "error_valid">Неправильный формат email</p>
+          <p class = "error_valid">Неправильный формат email</p>
           <h3 class="input_title">Пароль</h3>
           <input type="text" name="password"  class="popup__input popup__input_type_password" placeholder="Введите пароль">
-          <p id = "error-password" class =  " error_valid ">Неправильный формат пароля</p>
+          <p  class =  " error_valid ">Неправильный формат пароля</p>
           <h3 class="input_title">Имя</h3>
           <input type="text" name="name"  class="popup__input popup__input_type_name" placeholder="Введите своё имя">
-          <p id = "error-name" class = " error_valid a">Неправильный формат имени </p>
-          <p id = "error-name" class = "error_valid error_valid__registration">Такой пользователь уже есть</p>
-          <button type class="button popup__button " disabled >Зарегистрироваться</button>
-          <p class="or_registration">Или <a href="" class="or_registration_link"> Войти</a></p>
+          <p class = " error_valid a">Неправильный формат имени </p>
+          <p class = "error_valid error_valid__registration">Такой пользователь уже есть</p>
+          <button class="button popup__button " disabled >Зарегистрироваться</button>
+          <p class="or_registration">Или <a href="./index.html" class="or_registration_link"> Войти</a></p>
         </form>
         <form class="form  registration-ok none" name="enter">
           <img alt="закрыть" src="<%=require('./images/back.png').default%>" class="form__close">
           <h2 class="form__title">Пользователь успешно зарегистрирован!</h2>
-          <a href="" class="or_registration_link registration-ok__subtitle"> Выполнить вход</a>
+          <a href="./index.html" class="or_registration_link registration-ok__subtitle"> Выполнить вход</a>
         </form>
   </section>
   <section class="results">
@@ -86,7 +86,7 @@
         <div class="table">
           <div class="article">
             <div  class="article__icon_save"></div>
-            <img src="<%=require('./images/image_08.png').default%>" class="article__pic"   alt="картинка из статьи">
+            <img src="<%=require('./images/image_08.png').default%>" class="article__pic" alt="картинка из статьи">
             <p class="article__date">2 августа, 2019</p>
             <p class="article__title">Национальное достояние – парки</p>
             <p class="article__content">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
@@ -94,7 +94,7 @@
             <p class="article__source">Лента.ру</p>
           </div>
           <div class="article">
-            <img src="<%=require('./images/image_08.png').default%>" class="article__pic"   alt="картинка из статьи">
+            <img src="<%=require('./images/image_08.png').default%>" class="article__pic" alt="картинка из статьи">
             <p class="article__date">2 августа, 2019</p>
             <p class="article__title">Национальное достояние – парки</p>
             <p class="article__content">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
@@ -102,7 +102,7 @@
             <p class="article__source">Лента.ру</p>
           </div>
           <div class="article">
-            <img src="<%=require('./images/image_08.png').default%>" class="article__pic"   alt="картинка из статьи">
+            <img src="<%=require('./images/image_08.png').default%>" class="article__pic" alt="картинка из статьи">
             <p class="article__date">2 августа, 2019</p>
             <p class="article__title">Национальное достояние – парки</p>
             <p class="article__content">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
@@ -110,7 +110,7 @@
             <p class="article__source">Лента.ру</p>
           </div>
           <div class="article">
-            <img src="<%=require('./images/image_08.png').default%>" class="article__pic"   alt="картинка из статьи">
+            <img src="<%=require('./images/image_08.png').default%>" class="article__pic" alt="картинка из статьи">
             <p class="article__date">2 августа, 2019</p>
             <p class="article__title">Национальное достояние – парки</p>
             <p class="article__content">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
@@ -118,7 +118,7 @@
             <p class="article__source">Лента.ру</p>
           </div>
           <div class="article">
-            <img src="<%=require('./images/image_08.png').default%>" class="article__pic"   alt="картинка из статьи">
+            <img src="<%=require('./images/image_08.png').default%>" class="article__pic" alt="картинка из статьи">
             <p class="article__date">2 августа, 2019</p>
             <p class="article__title">Национальное достояние – парки</p>
             <p class="article__content">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
@@ -131,14 +131,14 @@
       <h3 class="finding_subtitle">Идет поиск новостей...</h3>
     </div>
     <div class="nothing_not_found">
-      <img src = "<%=require('./images/not-found_v1.png').default%>" class="nothing_not_found__img" alt="не найдено"></img src>
+      <img src = "<%=require('./images/not-found_v1.png').default%>" class="nothing_not_found__img" alt="не найдено">
       <h2 class="nothing_not_found__title">Ничего не найдено</h2>
       <h3 class="nothing_not_found__subtitle">К сожалению по вашему запросу ничего не найдено.</h3>
     </div>
     <button class="show_more">Показать ещё</button>
   </section>
   <section class="author">
-      <div class="author__photo" ><img src="<%=require('./images/image-03.png').default%> " alt="фото автора" width="100%" height="100%"> </div>
+      <div class="author__photo" ><img src="<%=require('./images/image-03.png').default%> " alt="фото автора" class="author__photo-img" > </div>
       <div class="about_author">
       <h2 class="about_author__title"> Об авторе</h2>
       <p class="about_author__info"> Это блок с описанием автора проекта. Здесь следует указать,
@@ -154,8 +154,8 @@
               <a href="https://praktikum.yandex.ru/" class="footer__info-yapracticum" target="_blank">Яндекс.Практикум</a>
             </div>
             <div class="footer__icons">
-              <a href="https://github.com/antonkozhukhov/"class="footer__icon" target="_blank"><img alt="гитхаб"   src="<%=require('./images/github.png').default%>" ></a>
-              <a href="https://www.facebook.com/anton.kozhukhov/"class="footer__icon" target="_blank"><img alt="фейсбук" href=""  src="<%=require('./images/fb.png').default%>" ></a>
+              <a href="https://github.com/antonkozhukhov/" class="footer__icon" target="_blank"><img alt="гитхаб"   src="<%=require('./images/github.png').default%>" ></a>
+              <a href="https://www.facebook.com/anton.kozhukhov/" class="footer__icon" target="_blank"><img alt="фейсбук" src="<%=require('./images/fb.png').default%>" ></a>
             </div>
         </footer>
       <script src="<%= htmlWebpackPlugin.files.chunks.main.entry%>"></script>
