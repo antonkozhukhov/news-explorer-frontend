@@ -70,6 +70,7 @@
 }
 .search-menu__button:hover{
   background: #347EFF;
+  cursor: url(../../../../images/lapka.png);
 }
 .search-menu__button:focus{
   background: #2A65CC;
