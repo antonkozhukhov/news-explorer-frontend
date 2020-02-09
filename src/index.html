@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
-
     <title>Поиск новостей</title>
 </head>
 <body>
@@ -12,13 +11,13 @@
         <header class="header">
           <h1 class="header__tittle">NewsExplorer</h1>
           <ul class="header__menu ">
-              <li><a href="./index.html" class="header__main">Главная</a></li>
-              <li><a href="./saved.html" class="header__saved-articles ">Сохраненные статьи</a></li>
-              <li><a href="./index.html" class="header__auth">Авторизоваться</a></li>
-              <li><div class="header__name-menu "></div>
+              <li class="header__main"><a href="./index.html" >Главная</a></li>
+              <li class="header__saved-articles "><a href="./saved.html" >Сохраненные статьи</a></li>
+              <li class="header__auth"><a href="./index.html" >Авторизоваться</a></li>
+              <li class="header__name-menu ">
                 <a href="./index.html" class="header__name">Антон</a>
                 <a href="./index.html" class="header__name-icon"><img alt="иконка выхода" src="<%=require('./images/logout.png').default%>"/></a>
-              </div></li>
+              </li>
             </ul>
           <img class="header__menu_mobile-img"  src = "<%=require('./images/mobile/menu_main.png').default%>" alt="иконка меню">
         </header>
