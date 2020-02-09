@@ -1,9 +1,9 @@
-.or_registration{
+.or-registration{
   margin: auto;
   align-items: center;
   text-align: center;
 }
-.or_registration_link{
+.or-registration__link{
   text-decoration: none;
 }
 .form__enter{

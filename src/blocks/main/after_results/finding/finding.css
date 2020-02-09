@@ -18,7 +18,7 @@
   transform: rotate(360deg);
 }
 }
-.finding_subtitle{
+.finding__subtitle{
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -41,7 +41,7 @@
   width: 30px;
   height: 30px;
 }
-.finding_subtitle{
+.finding__subtitle{
   font-size: 18px;
   line-height: 24px;
 }

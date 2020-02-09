@@ -1,4 +1,4 @@
-.input_title{
+.input-title{
   margin-top: 22px;
   margin-bottom: 9px;
   font-family: Inter;
@@ -8,7 +8,7 @@
   line-height: 15px;
   color: #2F71E5;
 }
-.popup__input{
+.form__input{
   width: 100%;
   border: 0;
   border-bottom: 1px solid rgba(0, 0, 0, .2);
@@ -19,20 +19,20 @@
   margin-bottom: 4px;
 }
 
-.popup__input:last-of-type {
+.form__input:last-of-type {
   margin-top: 0px;
   margin-bottom: 0px;
 }
-.popup__input:focus{
+.form__input:focus{
   border:0
 }
-.or_registration{
+.or-registration{
   margin: auto;
 
   align-items: center;
 text-align: center;
 }
-.or_registration_link{
+.or-registration__link{
   text-decoration: none;
 }
 .form__registration{
@@ -40,7 +40,7 @@ text-align: center;
 }
 
 @media (max-width :320px) {
-.input_title{
+.input-title{
   margin-top: 9px;
   margin-bottom: 9px;
   font-family: Inter;
@@ -51,7 +51,7 @@ line-height: 15px;
 
 color: #2F71E5;
 }
-.popup__input{
+.form__input{
   width: 100%;
   border: 0;
   border-bottom: 1px solid rgba(0, 0, 0, .2);
@@ -61,11 +61,11 @@ color: #2F71E5;
   padding: 0px 0px 10px;
   margin-bottom: 4px;
 }
-.popup__input:last-of-type {
+.form__input:last-of-type {
   margin-top: 0px;
   margin-bottom: 0px;
 }
-.popup__input:focus{
+.form__input:focus{
   border:0
 }
 }

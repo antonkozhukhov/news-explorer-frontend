@@ -6,7 +6,7 @@
   flex-direction: column;
   justify-content: space-between;
 }
-.article__icon_save{
+.article__icon-save{
   position: absolute;
   right: 24px;
   top: 24px;
@@ -15,7 +15,7 @@
   z-index: 1;
   background-image: url(../../../../images/Group12.png);
 }
-.article__icon_save:hover{
+.article__icon-save:hover{
   background-image: url(../../../../images/Group14.png);
 }
 .article__pic{
@@ -67,13 +67,16 @@
 @media (max-width :790px) {
 .article__date{
   margin-top: 16px;
-  margin-left: 24px;
+  margin-left: 16px;
+  margin-right: 16px;
   margin-bottom: 12px;
 }
 .article__title{
   margin-top: 0px;
   font-size: 16px;
   line-height: 18px;
+  margin-left: 16px;
+  margin-right: 16px;
 }
 .article__content{
   margin-left: 16px;

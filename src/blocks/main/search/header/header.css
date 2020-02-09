@@ -42,7 +42,7 @@
   padding-top: 0;
   border-bottom: 3px solid white;
 }
-.header__saved_articles{
+.header__saved-articles{
   font-size: 18px;
   line-height: 24px;
   text-decoration: none;
@@ -67,7 +67,7 @@
   font-size: 18px;
   line-height	: 40px;
 }
-.header__name_menu{
+.header__name-menu{
   font-size: 18px;
   font-family: Roboto;
   font-style: normal;
@@ -101,7 +101,7 @@
   margin-right: 16px;
   margin-bottom: 0px;
 }
-.header__saved_articles{
+.header__saved-articles{
   margin-right: 16px;
 }
 .header__auth{
@@ -150,7 +150,7 @@
   margin: 0;
   padding: 0
 }
-.header__saved_articles{
+.header__saved-articles{
   font-size: 18px;
   line-height: 24px;
   margin: 0;
@@ -161,7 +161,7 @@
   margin: 0;
   padding: 0;
 }
-.header__name_menu{
+.header__name-menu{
   margin: 0;
   padding: 0;
 }

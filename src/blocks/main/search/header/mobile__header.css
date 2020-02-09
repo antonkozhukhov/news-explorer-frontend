@@ -1,4 +1,4 @@
-.body_mobile{
+.body-mobile{
   z-index: 3;
   display: none;
   width: 100%;
@@ -10,7 +10,7 @@
   width: 100%;
   background-color: rgba(0, 0, 0);
 }
-.header_mobile{
+.mobile__header{
   padding-right: 16px;
   box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
   display: flex;
@@ -54,7 +54,7 @@
   color: #FFFFFF;
   text-decoration: none;
 }
-.header__saved_articles_mobile{
+.header__saved-articles_mobile{
   width: 100%;
   font-family: Roboto;
   font-style: normal;
@@ -64,7 +64,7 @@
   color: #FFFFFF;
   text-decoration: none;
 }
-.header__name_menu_mobile{
+.header__name-menu_mobile{
   width: 100%;
   display: flex;
   margin: auto;

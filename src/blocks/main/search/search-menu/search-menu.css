@@ -5,14 +5,14 @@
   background-size: cover;
   background-position: center;
 }
-.search_menu{
+.search-menu{
   width: 42%;
   margin: auto;
   padding: 0;
   padding-top: 80px;
   padding-bottom: 80px;
 }
-.search_menu__tittle{
+.search-menu__tittle{
   margin-bottom: 32px;
   font-family: Roboto Slab;
   font-style: normal;
@@ -21,7 +21,7 @@
   line-height: 64px;
   color: #FFFFFF;
 }
-.search_menu__subtittle{
+.search-menu__subtittle{
   margin-bottom: 64px;
   font-family: Roboto;
   font-style: normal;
@@ -30,7 +30,7 @@
   line-height: 24px;
   color: #FFFFFF;
 }
-.search_menu__form{
+.search-menu__form{
   height: 64px;
   width: 100%;
   margin: auto;
@@ -40,7 +40,7 @@
   box-sizing: border-box;
   border-radius: 100px;
 }
-.search_menu__input{
+.search-menu__input{
   width: 100%;
   font-family: Roboto;
   font-style: normal;
@@ -54,7 +54,7 @@
   border-radius: 100px;
   color: #B6BCBF;
 }
-.search_menu__button{
+.search-menu__button{
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
@@ -68,28 +68,28 @@
   font-size: 18px;
   line-height: 24px;
 }
-.search_menu__button:hover{
+.search-menu__button:hover{
   background: #347EFF;
 }
-.search_menu__button:focus{
+.search-menu__button:focus{
   background: #2A65CC;
 }
 @media (max-width :790px) {
-.search_menu{
+.search-menu{
   width: 89%;
   margin: 0;
   margin: auto;
 }
-.search_menu__form{
+.search-menu__form{
 width: 300px;
 }
-.search_menu__tittle{
+.search-menu__tittle{
   font-size: 40px;
   line-height: 40px;
 }
 }
 @media (max-width :350px) {
-.search_menu__form{
+.search-menu__form{
   margin-left: -15px;
 }
 }
@@ -98,7 +98,7 @@ width: 300px;
   background-image: url(../../../../images/mobile/georgia-de-lotz--UsJoNxLaNo-unsplash_2.png);
   background-position: 0% 0%;
 }
-.search_menu{
+.search-menu{
   width: 89%;
   padding-top: 0px;
   padding-bottom: 100px;
@@ -107,7 +107,7 @@ width: 300px;
   display: flex;
   flex-direction: column;
 }
-  .search_menu__tittle{
+  .search-menu__tittle{
   width: 100%;
   padding-top: 30px;
   font-size: 24px;
@@ -115,7 +115,7 @@ width: 300px;
   color: #FFFFFF;
   margin: 0;
 }
-.search_menu__subtittle{
+.search-menu__subtittle{
   width: 100%;
   margin-top: 16px;
   margin-bottom: 0px;
@@ -123,7 +123,7 @@ width: 300px;
   margin-right: 0;
   padding-bottom: 122px;
 }
-.search_menu__form{
+.search-menu__form{
   width: 100%;
   min-width: 0;
   flex-direction: column;
@@ -132,7 +132,7 @@ width: 300px;
   padding-top: 0;
   border-radius: 0px;
 }
-.search_menu__input{
+.search-menu__input{
   width: 100%;
   height: 56px;
   margin-bottom: 16px;
@@ -144,7 +144,7 @@ width: 300px;
   color: #B6BCBF;
   padding: 15px 0px;
 }
-.search_menu__button{
+.search-menu__button{
   width: 100%;
   height: 56px;
   margin: 0;

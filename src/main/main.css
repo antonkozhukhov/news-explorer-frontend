@@ -1,9 +1,9 @@
-@import url(../blocks/main/popup_forms/form.css);
+@import url(../blocks/main/popup-forms/form.css);
 @import url(../blocks/main/footer/footer.css);
 @import url(../blocks/main/results/results.css);
 @import url(../blocks/main/search/header/header.css);
-@import url(../blocks/main/search/search_menu/search_menu.css);
-@import url(../blocks/main/search/header/header_mobile.css);
+@import url(../blocks/main/search/search-menu/search-menu.css);
+@import url(../blocks/main/search/header/mobile__header.css);
 @import url(../blocks/main/author/author.css);
 @import url(../blocks/main/after_results/after_results.css);
 
