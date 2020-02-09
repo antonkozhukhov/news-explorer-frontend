@@ -24,9 +24,15 @@
   font-style:  normal;
   src: url(../roboto/robotoslab-regular-webfont.woff) format("woff");
 }
+.class {
+  font-family: 'Имя шрифта', Arial;
+  }
 textarea:focus, input:focus, button:focus
 {
   outline: none;
+}
+a:focus{
+  cursor: pointer;
 }
 body{
   max-width: 1440px;

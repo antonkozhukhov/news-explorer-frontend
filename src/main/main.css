@@ -8,25 +8,29 @@
 @import url(../blocks/main/after_results/after_results.css);
 
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
   font-style:  normal;
   src: url(../roboto/roboto-regular-webfont.woff) format("woff");
 }
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
   font-style:  normal;
   font-weight: 200;
   src: url(../roboto/roboto-medium-webfont.woff) format("woff");
 }
 
 @font-face {
-  font-family: 'Roboto Slab';
+  font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
   font-style:  normal;
   src: url(../roboto/robotoslab-regular-webfont.woff) format("woff");
 }
+
 textarea:focus, input:focus, button:focus
 {
   outline: none;
+}
+a:focus{
+  cursor: pointer;
 }
 body{
 max-width: 1440px;
