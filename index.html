@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.03863ff6f5e321dcc317.css?06b1a563c08d5cc76623">
+    <link rel="stylesheet" href="style.c90133c344d5261353d8.css?3f980cc07778efa23865">
     <title>Поиск новостей</title>
 </head>
 <body>
   <section class="search">
         <header class="header">
           <h1 class="header__tittle">NewsExplorer</h1>
-          <div class="header__menu ">
-              <a href="./index.html" class="header__main">Главная</a>
-              <a href="./saved.html" class="header__saved-articles ">Сохраненные статьи</a>
-              <a href="./index.html" class="header__auth">Авторизоваться</a>
-              <div class="header__name-menu ">
+          <ul class="header__menu ">
+              <li href="./index.html" class="header__main">Главная</li>
+              <li href="./saved.html" class="header__saved-articles ">Сохраненные статьи</li>
+              <li href="./index.html" class="header__auth">Авторизоваться</li>
+              <li class="header__name-menu ">
                 <a href="./index.html" class="header__name">Антон</a>
                 <a href="./index.html" class="header__name-icon"><img alt="иконка выхода" src="./images/logout.png"/></a>
-              </div>
-          </div>
+              </li>
+            </ul>
           <img class="header__menu_mobile-img"  src = "./images/menu_main.png" alt="иконка меню">
         </header>
         <div class="body-mobile">
@@ -27,19 +27,19 @@
                     <h1 class="header__tittle_mobile">NewsExplorer</h1>
                     <img src = "./images/back.png" alt="иконка меню" class="header__menu_mobile-img">
                   </div>
-                  <div class="header__menu_mobile">
-                    <a href="./index.html" class="header__main_mobile">Главная</a>
-                    <a href="./saved.html" class="header__saved-articles_mobile  ">Сохраненные статьи</a>
+                  <ul class="header__menu_mobile">
+                    <li href="./index.html" class="header__main_mobile">Главная</li>
+                    <li href="./saved.html" class="header__saved-articles_mobile  ">Сохраненные статьи</li>
                     <div class = "header__name-menu_mobile">
                       <a href="./index.html" class="header__name_mobile ">Антон </a>
                       <a href="./index.html" class="header__name-icon_mobile"><img alt="иконка выхода" src="./images/logout.png"/></a>
                     </div>
-                  </div>
+                  </ul>
             </div>
         </div>
         <div class="search-menu">
-          <p class="search-menu__tittle">Что в мире творится?</p>
-          <p class="search-menu__subtittle">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</p>
+          <h2 class="search-menu__tittle">Что в мире творится?</h2>
+          <h3 class="search-menu__subtittle">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</h3>
           <form class="search-menu__form" name="search">
             <input type="text" name="name"  class="search-menu__input" placeholder="Введите тему новости">
             <button class="button search-menu__button">Искать</button>
@@ -51,10 +51,10 @@
           <img alt="закрыть" src="./images/back.png" class="form__close">
           <h2 class="form__title">Вход</h2>
           <h3 class="input-title">Email</h3>
-          <input type="text" name="email"  class="form__input form__input_type-email" placeholder="Введите почту">
+          <input type="text" name="email" pattern="^[a-z0-9]+(\.)?[a-z0-9_-]+@[a-z0-9][a-z0-9_-]+\.([a-z]){2,10}(\.[a-z]{2,10})?$"  class="form__input form__input_type-email" placeholder="Введите почту">
           <p class = "error-valid">Неправильный формат email </p>
           <h3 class="input-title">Пароль</h3>
-          <input type="text" name="password"  class="form__input form__input_type-password" placeholder="Введите пароль">
+          <input type="text" name="password" minlength="2"  class="form__input form__input_type-password" placeholder="Введите пароль">
           <p class =  "error-valid">Неправильный формат пароля </p>
           <button class="button form__button " disabled >Войти</button>
           <p class="or-registration">Или <a href="./index.html" class="or-registration__link">Зарегистрироваться</a></p>
@@ -63,13 +63,13 @@
           <img alt="закрыть" src="./images/back.png" class="form__close">
           <h2 class="form__title">Регистрация</h2>
           <h3 class="input-title">Email</h3>
-          <input type="text" name="email"  class="form__input form__input_type-email" placeholder="Введите почту">
+          <input type="text" name="email" pattern="^[a-z0-9]+(\.)?[a-z0-9_-]+@[a-z0-9][a-z0-9_-]+\.([a-z]){2,10}(\.[a-z]{2,10})?$"  class="form__input form__input_type-email" placeholder="Введите почту">
           <p class = "error-valid">Неправильный формат email</p>
           <h3 class="input-title">Пароль</h3>
-          <input type="text" name="password"  class="form__input form__input_type-password" placeholder="Введите пароль">
+          <input type="text" name="password" minlength="2"  class="form__input form__input_type-password"  placeholder="Введите пароль">
           <p  class =  " error-valid ">Неправильный формат пароля</p>
           <h3 class="input-title">Имя</h3>
-          <input type="text" name="name"  class="form__input form__input_type-name" placeholder="Введите своё имя">
+          <input type="text" name="name" minlength="2" maxlength="30"  pattern= "^[А-ЯЁ][а-яё]+(-[А-ЯЁ][а-яё]+)?$"  class="form__input form__input_type-name" placeholder="Введите своё имя">
           <p class = " error-valid a">Неправильный формат имени </p>
           <p class = "error-valid error-valid__registration">Такой пользователь уже есть</p>
           <button class="button form__button " disabled >Зарегистрироваться</button>
@@ -88,7 +88,7 @@
             <div  class="article__icon-save"></div>
             <img class="article__pic" src="./images/image_08.png" alt="картинка из статьи">
             <p class="article__date">2 августа, 2019</p>
-            <p class="article__title">Национальное достояние – парки</p>
+            <h3 class="article__title">Национальное достояние – парки</h3>
             <p class="article__content">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
                система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
             <p class="article__source">Лента.ру</p>
@@ -96,7 +96,7 @@
           <div class="article">
             <img src="./images/image_08.png" class="article__pic" alt="картинка из статьи">
             <p class="article__date">2 августа, 2019</p>
-            <p class="article__title">Национальное достояние – парки</p>
+            <h3 class="article__title">Национальное достояние – парки</h3>
             <p class="article__content">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
                система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
             <p class="article__source">Лента.ру</p>
@@ -104,7 +104,7 @@
           <div class="article">
             <img src="./images/image_08.png" class="article__pic" alt="картинка из статьи">
             <p class="article__date">2 августа, 2019</p>
-            <p class="article__title">Национальное достояние – парки</p>
+            <h3 class="article__title">Национальное достояние – парки</h3>
             <p class="article__content">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
                система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
             <p class="article__source">Лента.ру</p>
@@ -112,7 +112,7 @@
           <div class="article">
             <img src="./images/image_08.png" class="article__pic" alt="картинка из статьи">
             <p class="article__date">2 августа, 2019</p>
-            <p class="article__title">Национальное достояние – парки</p>
+            <h3 class="article__title">Национальное достояние – парки</h3>
             <p class="article__content">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
                система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
             <p class="article__source">Лента.ру</p>
@@ -120,7 +120,7 @@
           <div class="article">
             <img src="./images/image_08.png" class="article__pic" alt="картинка из статьи">
             <p class="article__date">2 августа, 2019</p>
-            <p class="article__title">Национальное достояние – парки</p>
+            <h3 class="article__title">Национальное достояние – парки</h3>
             <p class="article__content">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
                система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
             <p class="article__source">Лента.ру</p>
@@ -149,16 +149,16 @@
   </section>
         <footer class="footer">
             <p class=" footer__copyright">2020 Supercite</p>
-            <div class="footer__info">
-              <a href="" class="footer__info-main">Главная</a>
-              <a href="https://praktikum.yandex.ru/" class="footer__info-yapracticum" target="_blank">Яндекс.Практикум</a>
-            </div>
+            <ul class="footer__info">
+              <li href="" class="footer__info-main">Главная</li>
+              <li href="https://praktikum.yandex.ru/" class="footer__info-yapracticum" target="_blank">Яндекс.Практикум</li>
+              </ul>
             <div class="footer__icons">
-              <a href="https://github.com/antonkozhukhov/" class="footer__icon" target="_blank"><img alt="гитхаб"   src="./images/github.png" ></a>
-              <a href="https://www.facebook.com/anton.kozhukhov/" class="footer__icon" target="_blank"><img alt="фейсбук" src="./images/fb.png" ></a>
+              <a href="https://github.com/antonkozhukhov/" class="footer__icon" target="_blank"><picture alt="гитхаб"   src="./images/github.png" ></a>
+              <a href="https://www.facebook.com/anton.kozhukhov/" class="footer__icon" target="_blank"><picture alt="фейсбук" src="./images/fb.png" ></a>
             </div>
         </footer>
-      <script src="main/main.36b07943fbb518aa94fa.js?06b1a563c08d5cc76623"></script>
+      <script src="main/main.36b07943fbb518aa94fa.js?3f980cc07778efa23865"></script>
 </body>
 </html>
 
