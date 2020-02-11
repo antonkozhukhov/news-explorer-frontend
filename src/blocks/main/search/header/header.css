@@ -93,7 +93,7 @@
   margin-right: 6px;
   padding-top: 6px;
 }
-.header__menu_mobile-img{
+.header__menu-mobile-img{
   display: none;
 }
 @media (max-width :790px) {
@@ -136,7 +136,7 @@
   width: 117px;
 }
 
-.header__menu_mobile-img{
+.header__menu-mobile-img{
   display: block;
   width: 24px;
   height: 24px;
