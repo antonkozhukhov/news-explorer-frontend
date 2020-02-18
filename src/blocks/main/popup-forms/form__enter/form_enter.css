@@ -4,9 +4,12 @@
   text-align: center;
 }
 .or-registration__link{
+  border: none;
+  padding: 0;
+  background-color: inherit;
   text-decoration: none;
+  color: #2F71E5;
 }
-.form__enter{
-  display: none;
+.or-registration__link:hover{
+  
 }
-

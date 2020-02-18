@@ -72,6 +72,7 @@ new HtmlWebpackPlugin({
   filename: './saved.html',
 }),
     new MiniCssExtractPlugin({
+     // filename: '[name]/[name].[contenthash].css'
       filename: 'style.[contenthash].css'
   }),
   new OptimizeCssAssetsPlugin({

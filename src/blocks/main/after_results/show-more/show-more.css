@@ -3,6 +3,7 @@
   display: flex;
   margin: auto;
   height: 64px;
+  margin-top: 80px;
   background: #FFFFFF;
   border-radius: 80px;
   font-family: Roboto;
@@ -17,7 +18,7 @@
 }
 .show-more:hover{
   opacity: 0.9;
-  cursor: pointer;
+  
 }
 @media (max-width :790px) {
 .show-more{

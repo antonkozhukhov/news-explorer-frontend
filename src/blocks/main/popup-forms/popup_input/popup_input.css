@@ -1,4 +1,4 @@
-.input-title{
+.form__input-title{
   margin-top: 22px;
   margin-bottom: 9px;
   font-family: Inter;
@@ -17,14 +17,19 @@
   box-sizing: border-box;
   padding: 0px 0px 10px;
   margin-bottom: 4px;
+  color: #000000;
+  
 }
-
+.form__input::placeholder{
+  opacity: 0.2;
+}
 .form__input:last-of-type {
   margin-top: 0px;
   margin-bottom: 0px;
 }
 .form__input:focus{
   border:0;
+  opacity: 1;
   border-bottom: 1px solid rgba(0, 0, 0);
 }
 .or-registration{
@@ -41,7 +46,7 @@ text-align: center;
 }
 
 @media (max-width :320px) {
-.input-title{
+.form__input-title{
   margin-top: 9px;
   margin-bottom: 9px;
   font-family: Inter;

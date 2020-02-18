@@ -67,6 +67,9 @@
   font-size: 18px;
   line-height	: 40px;
 }
+.header__auth:hover{
+  cursor: url(../../../../images/lapka.png), pointer;
+}
 .header__name-menu{
   font-size: 18px;
   font-family: Roboto;
@@ -143,6 +146,7 @@
   padding-bottom: 16px;
   padding-top: 16px;
   padding-left: 0px;
+  cursor:url(../../../../images/lapka.png) pointer;
 }
 .header__main{
   padding-bottom: 27px;

@@ -53,6 +53,17 @@
   border: thick;
   border-radius: 100px;
   color: #B6BCBF;
+   
+  
+}
+.search-menu__input::placeholder{
+  color: #B6BCBF;
+}
+.search-menu__input::selection  {
+  background-color: white; 
+}
+.search-menu__input:focus{
+  color: #1A1B22;
 }
 .search-menu__button{
   font-family: Roboto;
@@ -72,7 +83,7 @@
   background: #347EFF;
   cursor: url(../../../../images/lapka.png);
 }
-.search-menu__button:focus{
+.search-menu__button:active{
   background: #2A65CC;
 }
 @media (max-width :790px) {

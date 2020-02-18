@@ -4,15 +4,18 @@
   padding-left: 40px;
   padding-bottom: 32px;
 }
-.search-menu-saved-uppersubtitle{
+.search-menu__uppersubtitle-saved{
   margin-top: -24px;
   margin-bottom: -16px;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 24px;
   color: rgba(26, 27, 34, 0.5);
+}
+.bold{
+  font-weight: bold;
 }
 @media (max-width :790px) {
 .search-menu_saved{
