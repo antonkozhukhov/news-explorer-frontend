@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash'); // добавили плагин
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
@@ -44,10 +45,11 @@ module.exports = {
        {
         test: /\.(svg|jpg|gif|ico|png)$/,
         use: [
-             'file-loader?name=/images/[name].[ext]',
+             'file-loader?name=./images/[name].[ext]',
              {
-               //  loader: 'image-webpack-loader',
-               loader: 'url-loader',
+                loader: 'image-webpack-loader',
+
+
                  },
         ],
         }
@@ -59,7 +61,10 @@ module.exports = {
     new webpack.DefinePlugin({
       'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
  }),
-
+ new CopyWebpackPlugin([{
+  from: './dist/images',
+  to: './main/images'
+}]),
  new HtmlWebpackPlugin({
   inject: false,
   hash: true,
