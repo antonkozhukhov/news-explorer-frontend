@@ -53,14 +53,14 @@
   border: thick;
   border-radius: 100px;
   color: #B6BCBF;
-   
-  
+
+
 }
 .search-menu__input::placeholder{
   color: #B6BCBF;
 }
 .search-menu__input::selection  {
-  background-color: white; 
+  background-color: white;
 }
 .search-menu__input:focus{
   color: #1A1B22;
