@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">-->
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+
     <title>Поиск новостей</title>
 </head>
 <body>
@@ -17,23 +17,23 @@
               <li class="header__auth"><a href="./index.html" >Авторизоваться</a></li>
               <li class="header__name-menu  ">
                 <a href="./index.html" class="header__name">Антон</a>
-                <a href="./index.html" class="header__name-icon"><img alt="иконка выхода" src='./images/logout.png'/></a>
+                <a href="./index.html" class="header__name-icon"><img alt="иконка выхода" src = "<%=require('./images/logout.png').default%>"/></a>
               </li>
             </ul>
-          <img class="header__menu-mobile-img"  src = './images/mobile/menu_main.png' alt="иконка меню"><!--это элемент блока, а не модификатор-->
+          <img class="header__menu-mobile-img"  src = "<%=require('./images/mobile/menu_main.png').default%>" alt="иконка меню"><!--это элемент блока, а не модификатор-->
         </header>
         <div class="body-mobile display-none">
             <div class="mobile">
                   <div class="mobile__header">
                     <h1 class="header__tittle header__tittle_mobile">NewsExplorer</h1>
-                    <img src = './images/mobile/back.png' alt="иконка меню" class="header__menu-mobile-img" id ="exit">
+                    <img src = "<%=require('./images/mobile/back.png').default%>" alt="иконка меню" class="header__menu-mobile-img" id ="exit">
                   </div>
                   <ul class="header__menu header__menu_mobile">
                     <li class="header__main header__main_mobile"><a href="./index.html" >Главная</a></li>
                     <li class="header__saved-articles header__saved-articles_mobile"><a href="./pages/secondary/index.html" >Сохраненные статьи</a></li>
                     <li class = "header__name-menu header__name-menu_mobile">
                       <a href="./index.html" class="header__name header__name_mobile ">Антон </a>
-                      <a href="./index.html" class="header__name header__name-icon_mobile"><img alt="иконка выхода" src='./images/logout.png'/></a>
+                      <a href="./index.html" class="header__name header__name-icon_mobile"><img alt="иконка выхода" src = "<%=require('./images/logout.png').default%>"/></a>
                     </li>
                   </ul>
             </div>
@@ -51,7 +51,7 @@
 
 
         <form class="form  form__enter display-none" name="enter">
-          <img alt="закрыть" src='./images/back.png' class="form__close enter-close">
+          <img alt="закрыть" src = "<%=require('./images/back.png').default%>" class="form__close enter-close">
           <h2 class="form__title">Вход</h2>
           <h3 class="form__input-title">Email</h3>
           <input type="text" name="email"  class="form__input form__input_type-email" placeholder="Введите почту">
@@ -65,7 +65,7 @@
 
 
         <form class="form  form__registration " name="registration">
-          <img alt="закрыть" src='./images/back.png' class="form__close reg-close">
+          <img alt="закрыть" src = "<%=require('./images/back.png').default%>" class="form__close reg-close">
           <h2 class="form__title">Регистрация</h2>
           <h3 class="form__input-title">Email</h3>
           <input type="text" name="email"   class="form__input form__input_type-email" placeholder="Введите почту">
@@ -81,7 +81,7 @@
           <p class="or-registration ">Или <button class="or-registration__link or-registration__link_enter"> Войти</button></p>
         </form>
         <form class="form  registration-ok display-none" name="enter">
-          <img alt="закрыть" src='./images/back.png' class="form__close">
+          <img alt="закрыть" src = "<%=require('./images/back.png').default%>" class="form__close">
           <h2 class="form__title">Пользователь успешно зарегистрирован!</h2>
           <a href="./index.html" class="or-registration__link registration-ok__subtitle"> Выполнить вход</a>
         </form>
@@ -89,20 +89,12 @@
   <section class="results ">
         <p class="results__title">Результаты поиска</p>
         <div class="table">
-          <div class="article">
-            <div  class="article__icon-save"></div>
-            <div><img class="article__pic" src='./images/image_08.png' alt="картинка из статьи"></div>
-            <p class="article__date">2 августа, 2019</p>
-            <h3 class="article__title">Национальное достояние – парки</h3>
-            <p class="article__content">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
-               система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-            <p class="article__source">Лента.ру</p>
-          </div>
+
 
          <!--шаблон статьи
 
            <div class="article">
-            <img src='./images/image_08.png' class="article__pic" alt="картинка из статьи">
+            <img src = "<%=require('./images/image_08.png').default%>" class="article__pic" alt="картинка из статьи">
             <p class="article__date">2 августа, 2019</p>
             <h3 class="article__title">Национальное достояние – парки</h3>
             <p class="article__content">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
@@ -116,14 +108,14 @@
       <h3 class="finding__subtitle">Идет поиск новостей...</h3>
     </div>
     <div class="nothing-not-found display-none">
-      <img src = './images/not-found_v1.png' class="nothing-not-found__img" alt="не найдено">
+      <img src = "<%=require('./images/not-found_v1.png').default%>" class="nothing-not-found__img" alt="не найдено">
       <h2 class="nothing-not-found__title">Ничего не найдено</h2>
       <h3 class="nothing-not-found__subtitle">К сожалению по вашему запросу ничего не найдено.</h3>
     </div>
     <button class="show-more display-none" >Показать ещё</button>
   </section>
   <section class="author">
-    <div class="author__photo" ><img src='./images/image-03.png' alt="фото автора" class="author__img" > </div>
+    <div class="author__photo" ><img src = "<%=require('./images/image-03.png').default%>" alt="фото автора" class="author__img" > </div>
       <div class="author__about">
       <h2 class="author__title"> Об авторе</h2>
       <p class="author__info"> Это блок с описанием автора проекта. Здесь следует указать,
@@ -142,25 +134,25 @@
           <a href="https://github.com/antonkozhukhov/" class="footer__icon" target="_blank">
             <picture>
               <source media="(max-width: 400px)"
-              srcset='./images/github@2x.svg' >
+              srcset="<%=require('./images/github@2x.svg').default%>" />
               <source media="(max-width: 800px)"
-              srcset='./images/github@2x.svg'>
-              <img alt="гитхаб"    src='./images/github.png' >
+              srcset="<%=require('./images/github@2x.svg').default%>"/>
+              <img alt="гитхаб"    src = "<%=require('./images/github.png').default%>" />
             </picture>
           </a>
           <a href="https://www.facebook.com/anton.kozhukhov/" class="footer__icon" target="_blank">
             <picture>
               <source media="(max-width: 400px)"
-              srcset='./images/iconmonstr-facebook-6.svg'>
+              srcset="<%=require('./images/iconmonstr-facebook-6.svg').default%>"/>
               <source media="(max-width: 800px)"
-              srcset='./images/iconmonstr-facebook-6.svg'>
-              <img alt="фейсбук" src='./images/fb.png' > >
+              srcset="<%=require('./images/iconmonstr-facebook-6.svg').default%>"/>
+              <img alt="фейсбук" src = "<%=require('./images/fb.png').default%>" /> >
             </picture>
           </a>
         </div>
   </footer>
-     <!--<script src="<%= htmlWebpackPlugin.files.chunks.main.entry%>"></script>-->
-     <script src="./scripts/script.js"></script>
+     <script src="<%= htmlWebpackPlugin.files.chunks.main.entry%>"></script>
+
 </body>
 </html>
 

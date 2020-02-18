@@ -1,1 +1,1 @@
-import './saved/saved.css'
+import './index.css'

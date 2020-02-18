@@ -1,4 +1,4 @@
-//import './main/main.css'
-//import './scripts/script.js'
+import './index.css'
+import './scripts/script.js'
 
 
