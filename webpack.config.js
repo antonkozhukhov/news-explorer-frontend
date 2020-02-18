@@ -22,7 +22,7 @@ module.exports = {
     rules: [
       {
         test: /\.(eot|ttf|woff|woff2)$/,
-        loader: 'file-loader?name=./vendor/[name].[ext]'
+        loader: 'file-loader?name=./roboto/[name].[ext]'
         },
       {
         test: /\.css$/i,
