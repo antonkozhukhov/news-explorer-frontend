@@ -23,65 +23,65 @@ class Api {
   constructor(options) {
     this.baseUrl = options['baseUrl'];
     this.headers = options['headers'];
-    
+
   }
-  
-  
+
+
   signup(name, email, password){
     return fetch('http://www.api.news-explorer.fun/signup', {
     method: 'POST',
     headers: {
-         
+
       'Content-Type': 'application/json'
   },
-    
+
     body: JSON.stringify({
         name: name,
         email: email,
-        password: password        
-       
+        password: password
+
       })
     })
-    
+
     .then(res => {
-      console.log(res) 
+      console.log(res)
       if (res.ok) {
        return res.json();
-      }     
-      console.log(res) 
+      }
+      console.log(res)
       const { message } = res.json()
       return Promise.reject(`Ошибка1: ${message}`);
     })
         .catch((err) => {
-      console.log(err); 
-    });      
+      console.log(err);
+    });
 }
 signin(email, password){
   return fetch('http://www.api.news-explorer.fun/signin', {
   credentials: 'include',
   method: 'POST',
   headers: {
-    
+
     'Content-Type': 'application/json'
 },
-  
+
   body: JSON.stringify({
       email: email,
-      password: password        
-     
+      password: password
+
     })
   })
-  
+
   .then(res => {
     if (res.ok) {
      return res;
-    }      
+    }
     return Promise.reject(`Ошибка1: ${res.status}`);
   })
-  
+
       .catch((err) => {
-    console.log(err); 
-  });      
+    console.log(err);
+  });
 }
 
 
@@ -90,7 +90,7 @@ class NewsApi {
   constructor(options) {
     this.baseUrl = options['baseUrl'];
     this.headers = options['headers'];
-    
+
   }
 getNews(url){
   return fetch('https://newsapi.org/v2/everything?' +
@@ -99,19 +99,19 @@ getNews(url){
   'sortBy=popularity&' +
   'language=ru&' +
    'pageSize=100&'+'apiKey=3811c0c95b1241fc8a93d4e6bd879b2d', {
-  method: 'GET',  
+  method: 'GET',
   })
-  
+
   .then(res => {
     if (res.ok) {
      return res.json();
-    }      
+    }
     return Promise.reject(`Ошибка1: ${res.status}`);
   })
-  
+
       .catch((err) => {
-    console.log(err); 
-  });      
+    console.log(err);
+  });
 }
 }
 const api = new Api({
@@ -127,10 +127,10 @@ const newsApi = new NewsApi({
   'from=2020-02-12&' +
   'sortBy=popularity&' +
   'language=ru&' +
-   'pageSize=100&'+'apiKey=3811c0c95b1241fc8a93d4e6bd879b2d', 
+   'pageSize=100&'+'apiKey=3811c0c95b1241fc8a93d4e6bd879b2d',
 });
 searchForm.addEventListener('submit', function(){
-  event.preventDefault();  
+  event.preventDefault();
 const searchForm1 = document.forms.search;
 const searchName1 = searchForm1.elements.name;
 console.log(searchName1.value)
@@ -143,8 +143,8 @@ newsApi.getNews(searchName1.value).then((res)=>{console.log(res)});
 class Popup{
   constructor(popupElement){
     this.popupElement = popupElement;
-    
-    
+
+
   }
   open(){
     document.querySelector('.popup-forms').classList.remove('display-none' );
@@ -154,7 +154,7 @@ class Popup{
     document.querySelector('.popup-forms').classList.add('display-none' );
     this.popupElement.classList.add('display-none');
     document.querySelector('.form__error-valid').textContent = '';
-    
+
     this.popupElement.reset(); // убираем сообщение об ошибке у второго ввода
   }
 }
@@ -186,7 +186,7 @@ class Validate{
         return false}
 
       else {
-        
+
         this.popuptype.querySelector(`#error-${event.target.name}`).textContent = '';
          return true;
       }
@@ -242,53 +242,53 @@ document.querySelector('.reg-close').addEventListener('click', function() {
 class Article{
   constructor(article, saved){
     this.saved =saved;
-    this.articleElement = this.createarticle(article, saved);       
+    this.articleElement = this.createarticle(article, saved);
     this.articleElement.querySelector('.article__icon-save').addEventListener('click', this.save);
-          
+
   }
   createarticle(templateArticle, saved){
-     
+
     const article = document.createElement('div');  /*создание элементов карточки*/
     article.classList.add('article');
-    
+
     const div1 = document.createElement('div');
     div1.classList.add('article__pic');
     const articleTitle = document.createElement('h3');
     articleTitle.classList.add('article__title');
-    articleTitle.textContent = templateArticle.title; 
-    
+    articleTitle.textContent = templateArticle.title;
+
     const articleImg = document.createElement('img');
     articleImg.classList.add('article__img');
     articleImg.setAttribute('src',templateArticle.urlToImage);  /*установка названия карточки*/
-  
+
     const articleIconSave = document.createElement('div');
     articleIconSave.classList.add('article__icon-save');
      /*установка background карточки*/
-  
+
      const articleDate = document.createElement('p');
      articleDate.classList.add('article__date');
-     articleDate.textContent = date(templateArticle.publishedAt);  
+     articleDate.textContent = date(templateArticle.publishedAt);
 
      const articleContent = document.createElement('p');
      articleContent.classList.add('article__content');
-     articleContent.textContent = templateArticle.description;  
+     articleContent.textContent = templateArticle.description;
 
      const articleSource = document.createElement('p');
      articleSource.classList.add('article__source');
-     articleSource.textContent = templateArticle.source.name;  
+     articleSource.textContent = templateArticle.source.name;
 
-   
+
      div1.appendChild(articleImg);
     article.appendChild(articleIconSave);
     article.appendChild(div1);
-    
+
     article.appendChild(articleDate);
     article.appendChild(articleTitle);
     article.appendChild(articleContent);
     article.appendChild(articleSource);
 
 
-  
+
     return article;
   }
   save(keyword, article){
@@ -308,13 +308,13 @@ class ArticleList{
     this.initialArticles = initialArticles;
     this.render(initialArticles);
   }
-  
-  addArticle(article, saved){          
+
+  addArticle(article, saved){
       const {articleElement} = new Article(article, saved);
-      this.container.appendChild(articleElement);      
+      this.container.appendChild(articleElement);
   }
   render(initialArticles){
-          initialArticles.forEach((article) => this.addArticle(article, false))          
+          initialArticles.forEach((article) => this.addArticle(article, false))
   }
 }
 let articleList;
@@ -355,12 +355,12 @@ function date(str){
 }
   return(String(Number(str.substr(8,2))) + ' '+ month(Number(str.substr(5,2)))+', ' + str.substr(0,4));
 }
- 
+
 searchForm.addEventListener('submit', function(){
   numb = 0;
-  event.preventDefault();  
+  event.preventDefault();
   articles= [];
-  
+
   articleContainer.innerHTML = '';
   document.querySelector('.results').classList.remove('display-none')
   document.querySelector('.nothing-not-found').classList.add('display-none');
@@ -370,18 +370,18 @@ const searchForm1 = document.forms.search;
 const searchName1 = searchForm1.elements.name;
 
 newsApi.getNews(searchName1.value).then((res)=>{
-   document.querySelector('.finding').classList.add('display-none');  
+   document.querySelector('.finding').classList.add('display-none');
   if (res.articles.length === 0){ document.querySelector('.nothing-not-found').classList.remove('display-none') }
   if (res.articles.length!=0 && res.articles.length<=3){
   articleList = new ArticleList(articleContainer, res.articles);
   }
-  if (res.articles.length > 3){ 
+  if (res.articles.length > 3){
          for (let i=0;i<3; i++ ){
       articleContainer.appendChild((new Article(res.articles[i],false)).createarticle(res.articles[i],false))
       }
       document.querySelector('.show-more').classList.remove('display-none')
       articles = res.articles;
-      
+
     }
 
 })
@@ -400,14 +400,14 @@ showmoreButton.addEventListener('click', function() {
      document.querySelector('.show-more').classList.add('display-none')
     for (let i = numb;i <= lengthArticles; i++ ){
     articleContainer.appendChild((new Article(articles[i],false)).createarticle(articles[i],false))
-    }    
+    }
   }
 })
 
 
 
 
- 
+
 
 document.querySelector('.header__auth').addEventListener('click', function() {
   event.preventDefault();
@@ -431,7 +431,7 @@ document.querySelector('.or-registration__link_enter').addEventListener('click',
   event.preventDefault();
   registrationPopup.close();
   enterPopup.open();
-  
+
 });
 
 
@@ -449,7 +449,7 @@ registrationForm.addEventListener('submit', function(){
 const registrationName1 = registrationForm1.elements.name;
 const registrationEmail1 = registrationForm1.elements.email;
 const registrationPassword1 = registrationForm1.elements.password;
-  
+
   console.log(registrationName1,registrationEmail1, registrationPassword1);
   api.signup(registrationName1.value, registrationEmail1.value, registrationPassword1.value).then((res)=>{console.log(res)});
 })
@@ -457,9 +457,9 @@ enterForm.addEventListener('submit', function(){
   event.preventDefault();
   const enterForm1 = document.forms.enter;
 const enterEmail1 = enterForm1.elements.email;
-const enterPassword1 = enterForm1.elements.password; 
-  
-  api.signin( enterEmail1.value, enterPassword1.value).then((res)=>{localStorage.setItem('to1ken', res.token);});
+const enterPassword1 = enterForm1.elements.password;
+
+  api.signin( enterEmail1.value, enterPassword1.value).then((res)=>{console.log(res); localStorage.setItem('to1ken', res.token);});
 })
 
 
