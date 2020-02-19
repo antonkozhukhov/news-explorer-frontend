@@ -1,7 +1,8 @@
 const webpack = require('webpack');
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+//const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CssUrlRelativePlugin = require('css-url-relative-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash'); // добавили плагин
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
@@ -28,9 +29,15 @@ module.exports = {
       {
         test: /\.css$/i,
         use: [
-          (isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
+          (isDev ? 'style-loader' : {
+            loader: MiniCssExtractPlugin.loader,
+                options: {
+                    publicPath: '../',
+                }
+            }),
           'css-loader',
           'postcss-loader',
+
 
       ]
       },
@@ -61,10 +68,7 @@ module.exports = {
     new webpack.DefinePlugin({
       'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
  }),
- new CopyWebpackPlugin([{
-  from: './dist/images',
-  to: './main/images'
-}]),
+
  new HtmlWebpackPlugin({
   inject: false,
   hash: true,
@@ -79,6 +83,7 @@ new HtmlWebpackPlugin({
 }),
     new MiniCssExtractPlugin({
      filename: '[name]/[name].[contenthash].css'
+
 
   }),
   new OptimizeCssAssetsPlugin({
