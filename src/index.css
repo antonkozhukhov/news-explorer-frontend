@@ -8,19 +8,19 @@
 @import url(./blocks/main/after_results/after_results.css);
 
 @font-face {
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-family: 'Roboto';
   font-style:  normal;
   src: url(./roboto/roboto-regular-webfont.woff) format("woff");
 }
 @font-face {
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-family: 'Roboto';
   font-style:  normal;
   font-weight: 200;
   src: url(./roboto/roboto-medium-webfont.woff) format("woff");
 }
 
 @font-face {
-  font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
+  font-family: 'Roboto Slab';
   font-style:  normal;
   src: url(./roboto/robotoslab-regular-webfont.woff) format("woff");
 }
@@ -33,13 +33,13 @@ textarea:focus, input:focus, button:focus
 a:focus{
   cursor: url(./images/lapka.png),pointer;
 }
-button:hover, a:hover{
+button:hover{
   cursor: url(./images/lapka.png),pointer;
 }
 a{
   text-decoration: none;
   color: #FFFFFF;
-  cursor: url(./images/lapka.png);
+  cursor: url(./images/lapka.png), pointer;
 }
 a:hover{
   cursor: url(./images/lapka.png),pointer;
@@ -50,6 +50,7 @@ button:disabled{
 body{
 max-width: 1440px;
 margin: auto;
+font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
 }
 ul{
   list-style-type: none;

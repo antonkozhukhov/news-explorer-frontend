@@ -83,19 +83,19 @@
       <a href="https://github.com/antonkozhukhov/" class="footer__icon" target="_blank">
         <picture>
           <source media="(max-width: 400px)"
-          srcset="../<%=require('../../images/github@2x.svg').default%>" />
+          srcset="../<%=require('../../images/mobile/github_optim.svg').default%>" /> <!--оптимизирал svg, для мобильной версии на 400 байт меньше-->
           <source media="(max-width: 800px)"
           srcset="../<%=require('../../images/github@2x.svg').default%>"/>
-          <img alt="гитхаб"    src = "../<%=require('../../images/github.png').default%>" />>
+          <img alt="гитхаб"    src = "../<%=require('../../images/github.png').default%>" />
         </picture>
       </a>
       <a href="https://www.facebook.com/anton.kozhukhov/" class="footer__icon" target="_blank">
         <picture>
           <source media="(max-width: 400px)"
-          srcset="../<%=require('../../images/iconmonstr-facebook-6.svg').default%>"/>
+          srcset="../<%=require('../../images/mobile/iconmonstr-facebook-6_optim.svg').default%>"/> <!--оптимизирал svg, для мобильной версии на 139 байт меньше-->
           <source media="(max-width: 800px)"
           srcset="../<%=require('../../images/iconmonstr-facebook-6.svg').default%>"/>
-          <img alt="фейсбук" src = "../<%=require('../../images/fb.png').default%>" /> >
+          <img alt="фейсбук" src = "../<%=require('../../images/fb.png').default%>" />
         </picture>
       </a>
     </div>

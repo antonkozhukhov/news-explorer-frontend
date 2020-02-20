@@ -18,11 +18,21 @@
   justify-content: space-evenly;
   cursor: none;
 }
+
 .button__isvalid{
   color: #FFFFFF;
   background: #2F71E5;
   box-shadow: 0px 5px 15px rgba(14, 26, 57, 0.2);
   cursor: url(../../../../images/lapka.png),pointer;
+}
+.button__isvalid:focus{
+  background: #347EFF;
+}
+.button__isvalid:hover{
+  background: #347EFF;
+}
+.button__isvalid:active{
+  background: #2A65CC;
 }
 @media (max-width :520px){
 .form__button{

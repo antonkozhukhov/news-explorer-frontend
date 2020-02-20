@@ -8,19 +8,19 @@
 @import url(../../blocks/saved/search/search-menu/search-menu.css);
 
 @font-face {
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-family: 'Roboto';
   font-style:  normal;
   src: url(../../roboto/roboto-regular-webfont.woff) format("woff");
 }
 @font-face {
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-family: 'Roboto';
   font-style:  normal;
   font-weight: 200;
   src: url(../../roboto/roboto-medium-webfont.woff) format("woff");
 }
 
 @font-face {
-  font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
+  font-family: 'Roboto Slab';
   font-style:  normal;
   src: url(../../roboto/robotoslab-regular-webfont.woff) format("woff");
 }
@@ -28,7 +28,7 @@
 textarea:focus, input:focus, button:focus
 {
   outline: none;
-  cursor: url(../../images/lapka.png);
+  cursor: url(../../images/lapka.png),pointer;
 }
 a:focus{
   cursor: url(../../images/lapka.png),pointer;
@@ -39,20 +39,10 @@ button:hover, a:hover{
 a{
   text-decoration: none;
   color: #FFFFFF;
-  cursor: url(../../images/lapka.png);
-}
-a:hover{
   cursor: url(../../images/lapka.png),pointer;
-}
-a{
-  text-decoration: none;
-  color: #FFFFFF;
-  cursor: url(../../images/lapka.png);
-}
-a:hover{
-  cursor: url(../../images/lapka.png);
 }
 body{
   max-width: 1440px;
   margin: auto;
+  font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
   }
