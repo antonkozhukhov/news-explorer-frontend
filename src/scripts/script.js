@@ -28,7 +28,7 @@ class Api {
 
 
   signup(name, email, password){
-    return fetch('http://www.api.news-explorer.fun/signup', {
+    return fetch('https://www.api.news-explorer.fun/signup', {
     method: 'POST',
     headers: {
 
@@ -57,7 +57,7 @@ class Api {
     });
 }
 signin(email, password){
-  return fetch('http://www.api.news-explorer.fun/signin', {
+  return fetch('https://www.api.news-explorer.fun/signin', {
   credentials: 'include',
   method: 'POST',
   headers: {
@@ -74,7 +74,7 @@ signin(email, password){
 
   .then(res => {
     if (res.ok) {
-     return res;
+     return res.json();
     }
     return Promise.reject(`Ошибка1: ${res.status}`);
   })
@@ -459,7 +459,7 @@ enterForm.addEventListener('submit', function(){
 const enterEmail1 = enterForm1.elements.email;
 const enterPassword1 = enterForm1.elements.password;
 
-  api.signin( enterEmail1.value, enterPassword1.value).then((res)=>{console.log(res); localStorage.setItem('to1ken', res.token);});
+  api.signin( enterEmail1.value, enterPassword1.value).then((res)=>{console.log(res); localStorage.setItem('token', res.token);});
 })
 
 
