@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main/main.404de70461fdf222ac7a.css?3b80491e1a7d741d67c1"/>
+    <link rel="stylesheet" href="main/main.cab1d54393cada8d2b13.css?0ece9d80430a1bc1d5de"/>
 
     <title>Поиск новостей</title>
 </head>
@@ -13,7 +13,7 @@
           <h1 class="header__tittle">NewsExplorer</h1>
           <ul class="header__menu ">
               <li class="header__main"><a href="./index.html" >Главная</a></li>
-              <li class="header__saved-articles "><a href="./secondary/index.html" >Сохраненные статьи</a></li>
+              <li class="header__saved-articles "><a class = "special-href" href="./secondary/index.html" >Сохраненные статьи</a></li>
               <li class="header__auth"><a href="./index.html" >Авторизоваться</a></li>
               <li class="header__name-menu  ">
                 <a href="./index.html" class="header__name">Антон</a>
@@ -54,13 +54,13 @@
           <img alt="закрыть" src = "./images/back.png" class="form__close enter-close">
           <h2 class="form__title">Вход</h2>
           <h3 class="form__input-title">Email</h3>
-          <input type="text" name="email"  class="form__input form__input_type-email" placeholder="Введите почту">
-          <p id = "error-email" class = "form__error-valid">Неправильный формат email </p>
+          <input type="email" name="email" pattern="^[a-z0-9]+(\.)?[a-z0-9_-]+@[a-z0-9][a-z0-9_-]+\.([a-z]){2,10}(\.[a-z]{2,10})?$"  class="form__input form__input_type-email" placeholder="Введите почту">
+          <p id = "enter-error-email" class = "form__error-valid">Неправильный формат email </p>
           <h3 class="form__input-title">Пароль</h3>
-          <input type="password" name="password"   class="form__input form__input_type-password" placeholder="Введите пароль">
-          <p id = "error-password" class =  "form__error-valid">Неправильный формат пароля </p>
+          <input type="password" name="password" minlength="2" maxlength="30"   class="form__input form__input_type-password" placeholder="Введите пароль">
+          <p id = "enter-error-password" class =  "form__error-valid">Неправильный формат пароля </p>
           <button class="button form__button enter-button button__isvalid"  >Войти</button>
-          <p class="or-registration">Или <a href="" class="or-registration__link">Зарегистрироваться</a></p>
+          <p class="or-registration">Или <a href="./index.html" class="or-registration__link">Зарегистрироваться</a></p>
       </form>
 
 
@@ -68,13 +68,13 @@
           <img alt="закрыть" src = "./images/back.png" class="form__close reg-close">
           <h2 class="form__title">Регистрация</h2>
           <h3 class="form__input-title">Email</h3>
-          <input type="text" name="email"   class="form__input form__input_type-email" placeholder="Введите почту">
+          <input type="email" name="email" pattern="^[a-z0-9]+(\.)?[a-z0-9_-]+@[a-z0-9][a-z0-9_-]+\.([a-z]){2,10}(\.[a-z]{2,10})?$" class="form__input form__input_type-email" placeholder="Введите почту">
           <p id = "error-email" class = "form__error-valid "></p>
           <h3 class="form__input-title">Пароль</h3>
-          <input type="password" name="password"  class="form__input form__input_type-password"  placeholder="Введите пароль">
+          <input type="password" name="password" minlength="2" maxlength="30"   class="form__input form__input_type-password"  placeholder="Введите пароль">
           <p id = "error-password"  class =  " form__error-valid "></p>
           <h3 class="form__input-title">Имя</h3>
-          <input type="text" name="name"   class="form__input form__input_type-name" placeholder="Введите своё имя">
+          <input type="text" name="name" minlength="2" class="form__input form__input_type-name" placeholder="Введите своё имя">
           <p id = "error-name" class = " form__error-valid "></p>
           <p class = "form__error-valid form__error-valid__registration">Такой пользователь уже есть</p>
           <button class="button form__button registration-button "  >Зарегистрироваться</button>
@@ -134,24 +134,24 @@
           <a href="https://github.com/antonkozhukhov/" class="footer__icon" target="_blank">
             <picture>
               <source media="(max-width: 400px)"
-              srcset="./images/github@2x.svg" />
+              srcset="./images/github_optim.svg" />
               <source media="(max-width: 800px)"
               srcset="./images/github@2x.svg"/>
-              <img alt="гитхаб"    src = "./images/github.png" />
+              <img alt="гитхаб"    src = "./images/github.png"/>
             </picture>
           </a>
           <a href="https://www.facebook.com/anton.kozhukhov/" class="footer__icon" target="_blank">
             <picture>
               <source media="(max-width: 400px)"
-              srcset="./images/iconmonstr-facebook-6.svg"/>
+              srcset="./images/iconmonstr-facebook-6_optim.svg"/>
               <source media="(max-width: 800px)"
               srcset="./images/iconmonstr-facebook-6.svg"/>
-              <img alt="фейсбук" src = "./images/fb.png" /> >
+              <img alt="фейсбук" src = "./images/fb.png" />
             </picture>
           </a>
         </div>
   </footer>
-     <script src="main/main.d190de0901b9b9a3188e.js?3b80491e1a7d741d67c1"></script>
+     <script src="main/main.d190de0901b9b9a3188e.js?0ece9d80430a1bc1d5de"></script>
 
 </body>
 </html>
