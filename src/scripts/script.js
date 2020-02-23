@@ -58,9 +58,10 @@ class Api {
 }
 signin(email, password){
   return fetch('https://www.api.news-explorer.fun/signin', {
-  credentials: 'include',
+
   method: 'POST',
   headers: {
+    'Access-Control-Allow-Origin': 'https://www.news-explorer.fun',
 
     'Content-Type': 'application/json'
 },

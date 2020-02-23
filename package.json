@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node app.js",
     "dev": "webpack-dev-server --mode development --open --watch",
-    "deploy": "npm run build && scp -r ./dist/* antonkozhukhov@84.201.158.36:/home/antonkozhukhov/backend/news-explorer-api",
+    "deploy": "npm run build && gh-pages -d dist && scp -r ./dist/* antonkozhukhov@84.201.158.36:/home/antonkozhukhov/backend/news-explorer-api",
     "build": "rimraf dist && webpack --mode production"
   },
   "repository": {
