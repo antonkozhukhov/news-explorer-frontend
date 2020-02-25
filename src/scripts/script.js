@@ -61,7 +61,7 @@ signin(email, password){
 
   method: 'POST',
   headers: {
-    'Access-Control-Allow-Origin': 'https://www.news-explorer.fun',
+
 
     'Content-Type': 'application/json'
 },
@@ -84,7 +84,84 @@ signin(email, password){
     console.log(err);
   });
 }
+getArticles(){
+  return fetch('https://www.api.news-explorer.fun/articles', {
 
+  method: 'GET',
+  headers: {
+
+
+    authorization: `Bearer ${localStorage.getItem('token')}`
+},
+
+
+  })
+
+  .then(res => {
+    if (res.ok) {
+     return res.json();
+    }
+    return Promise.reject(`Ошибка2: ${res.status}`);
+  })
+
+      .catch((err) => {
+    console.log(err);
+  });
+}
+postArticle(keyword, article){
+  return fetch('https://www.api.news-explorer.fun/articles', {
+
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+
+    authorization: `Bearer ${localStorage.getItem('token')}`
+},
+body: JSON.stringify({
+    keyword: keyword,
+    title: article.title,
+    text: article.description,
+    date: date(article.publishedAt),
+    source: article.source.name,
+    link: article.url,
+    image: article.urlToImage,
+
+    })
+
+  })
+
+  .then(res => {
+    if (res.ok) {
+    return res.json();
+    }
+    return Promise.reject(`Ошибка2: ${res.status}`);
+  })
+      .catch((err) => {
+    console.log(err);
+  });
+}
+deleteArticle(id){
+  return fetch(`https://www.api.news-explorer.fun/articles/${id}`, {
+
+  method: 'DELETE',
+  headers: {
+    'Content-Type': 'application/json',
+
+    authorization: `Bearer ${localStorage.getItem('token')}`
+},
+
+  })
+
+  .then(res => {
+    if (res.ok) {
+    return res.json();
+    }
+    return Promise.reject(`Ошибка2: ${res.status}`);
+  })
+      .catch((err) => {
+    console.log(err);
+  });
+}
 
 }
 class NewsApi {
@@ -96,7 +173,8 @@ class NewsApi {
 getNews(url){
   return fetch('https://newsapi.org/v2/everything?' +
   `q=${url}&` +
-  'from=2020-02-12&' +
+  `from=${sevenDaysBefore}&` +
+  `to=${nowMoment}&`+
   'sortBy=popularity&' +
   'language=ru&' +
    'pageSize=100&'+'apiKey=3811c0c95b1241fc8a93d4e6bd879b2d', {
@@ -116,16 +194,20 @@ getNews(url){
 }
 }
 const api = new Api({
-  baseUrl: 'http://api.news-explorer.fun',
+  baseUrl: 'https://www.api.news-explorer.fun',
   headers: {
     'Content-Type': 'application/json'
   }
 });
-
+let now = new Date();
+let sevenDayBefore = new Date(now.getFullYear(), now.getMonth(), now.getDate()-7);
+let nowMoment = `${now.getFullYear()}`+'-'+`${(now.getMonth()+1).toString().padStart(2,0)}`+'-'+`${now.getDate()}`
+let sevenDaysBefore =`${sevenDayBefore.getFullYear()}`+'-'+`${(sevenDayBefore.getMonth()+1).toString().padStart(2,0)}`+'-'+`${sevenDayBefore.getDate()}`;
 const newsApi = new NewsApi({
   baseUrl: 'https://newsapi.org/v2/everything?' +
   'q=q&' +
-  'from=2020-02-12&' +
+  `from=${now}&` +
+  `to=${now- 7*24*3600*1000}&`+
   'sortBy=popularity&' +
   'language=ru&' +
    'pageSize=100&'+'apiKey=3811c0c95b1241fc8a93d4e6bd879b2d',
@@ -144,7 +226,7 @@ newsApi.getNews(searchName1.value).then((res)=>{console.log(res)});
 class Popup{
   constructor(popupElement){
     this.popupElement = popupElement;
-
+    this.popupElement.querySelector('.form__close').addEventListener('click',this.close);
 
   }
   open(){
@@ -155,7 +237,6 @@ class Popup{
     document.querySelector('.popup-forms').classList.add('display-none' );
     this.popupElement.classList.add('display-none');
     document.querySelector('.form__error-valid').textContent = '';
-
     this.popupElement.reset(); // убираем сообщение об ошибке у второго ввода
   }
 }
@@ -228,39 +309,66 @@ class Validate{
 }
 const enterPopup = new Popup(formEnter);
 const registrationPopup = new Popup(formRegistration);
-const registrationOkPopup = new Popup (formRegistrationOk);
+//const registrationOkPopup = new Popup (formRegistrationOk);
 const registrationValidate = new ValidateRegistration(registrationButton, formRegistration);
 const enterValidate = new ValidateEnter(enterButton, formEnter);
 
-document.querySelector('.enter-close').addEventListener('click', function() {
+/*document.querySelector('.enter-close').addEventListener('click', function() {
   enterPopup.close();
   enterValidate.buttonIsNotValid();});
 document.querySelector('.reg-close').addEventListener('click', function() {
   registrationPopup.close();
-  registrationValidate.buttonIsNotValid();});
+  registrationValidate.buttonIsNotValid();});*/
+
 
 
 class Article{
-  constructor(article, saved){
-    this.saved =saved;
-    this.articleElement = this.createarticle(article, saved);
-    this.articleElement.querySelector('.article__icon-save').addEventListener('click', this.save);
+  constructor(keyword, article, saved){
+    this.id = 123;
+    this.keyword = keyword;
+    this.saved = saved;
+    this.articleElement = this.createarticle(keyword, article, saved);
+    this.articleElement.querySelector('.article__icon-save').addEventListener('click', function( event){
+      event.stopImmediatePropagation()
+      event.preventDefault();
+      if(!saved){
+        saved = true;
+        api.postArticle(keyword, article)
+        .then(res=>{ this.id = res; console.log(this.id);})
+        .then(()=>{
+          return api.getArticles()
+        }).then((res)=>{
+          console.log(res)
+        })
+
+      }
+            else {
+        saved = false;
+        api.deleteArticle(this.id)
+        .then(()=>{
+          return api.getArticles()
+        }).then((res)=>{
+          console.log(res)
+        })
+      }
+          })
 
   }
-  createarticle(templateArticle, saved){
+  createarticle(keyword, article, saved){
 
-    const article = document.createElement('div');  /*создание элементов карточки*/
-    article.classList.add('article');
-
+    const article1 = document.createElement('a');  /*создание элементов карточки*/
+    article1.classList.add('article');
+    article1.setAttribute('href', article.url);
+    article1.setAttribute('target', '_blank');
     const div1 = document.createElement('div');
     div1.classList.add('article__pic');
     const articleTitle = document.createElement('h3');
     articleTitle.classList.add('article__title');
-    articleTitle.textContent = templateArticle.title;
+    articleTitle.textContent =  article.title;
 
     const articleImg = document.createElement('img');
     articleImg.classList.add('article__img');
-    articleImg.setAttribute('src',templateArticle.urlToImage);  /*установка названия карточки*/
+    articleImg.setAttribute('src', article.urlToImage);  /*установка названия карточки*/
 
     const articleIconSave = document.createElement('div');
     articleIconSave.classList.add('article__icon-save');
@@ -268,58 +376,52 @@ class Article{
 
      const articleDate = document.createElement('p');
      articleDate.classList.add('article__date');
-     articleDate.textContent = date(templateArticle.publishedAt);
+     articleDate.textContent = date( article.publishedAt);
 
      const articleContent = document.createElement('p');
      articleContent.classList.add('article__content');
-     articleContent.textContent = templateArticle.description;
+     articleContent.textContent =  article.description;
 
      const articleSource = document.createElement('p');
      articleSource.classList.add('article__source');
-     articleSource.textContent = templateArticle.source.name;
+     articleSource.textContent =  article.source.name;
 
 
      div1.appendChild(articleImg);
-    article.appendChild(articleIconSave);
-    article.appendChild(div1);
+    article1.appendChild(articleIconSave);
+    article1.appendChild(div1);
 
-    article.appendChild(articleDate);
-    article.appendChild(articleTitle);
-    article.appendChild(articleContent);
-    article.appendChild(articleSource);
+    article1.appendChild(articleDate);
+    article1.appendChild(articleTitle);
+    article1.appendChild(articleContent);
+    article1.appendChild(articleSource);
 
 
 
-    return article;
+    return article1;
   }
-  save(keyword, article){
-    if (!this.saved){
-      api.postCard(keyword, article);
-      this.articleElement.querySelector('.article__icon-save').classList.add('article__icon-save_active')
-    }
-    else{
-       api.deleteCard(this._id)
-    this.articleElement.querySelector('.article__icon-save').classList.remove('article__icon-save_active');
-    }
-  }
+
 }
 class ArticleList{
-  constructor(container, initialArticles){
+  constructor(keyword, container, initialArticles){
+    this.keyword = keyword;
     this.container = container;
     this.initialArticles = initialArticles;
-    this.render(initialArticles);
+    this.render(keyword, initialArticles);
   }
 
-  addArticle(article, saved){
-      const {articleElement} = new Article(article, saved);
+  addArticle(keyword, article, saved){
+      const {articleElement} = new Article(keyword, article, saved);
       this.container.appendChild(articleElement);
   }
-  render(initialArticles){
-          initialArticles.forEach((article) => this.addArticle(article, false))
+  render(keyword, initialArticles){
+          initialArticles.forEach((article) => this.addArticle(keyword, article, false))
   }
 }
 let articleList;
 let articles = [];
+let articlesAll = [];
+
 let lengthArticles;
 let numb;
 
@@ -356,13 +458,13 @@ function date(str){
 }
   return(String(Number(str.substr(8,2))) + ' '+ month(Number(str.substr(5,2)))+', ' + str.substr(0,4));
 }
-
+let keyWord = '';
 searchForm.addEventListener('submit', function(){
   numb = 0;
   event.preventDefault();
   articles= [];
 
-  articleContainer.innerHTML = '';
+ articleContainer.innerHTML = '';
   document.querySelector('.results').classList.remove('display-none')
   document.querySelector('.nothing-not-found').classList.add('display-none');
   document.querySelector('.show-more').classList.add('display-none');
@@ -374,35 +476,44 @@ newsApi.getNews(searchName1.value).then((res)=>{
    document.querySelector('.finding').classList.add('display-none');
   if (res.articles.length === 0){ document.querySelector('.nothing-not-found').classList.remove('display-none') }
   if (res.articles.length!=0 && res.articles.length<=3){
-  articleList = new ArticleList(articleContainer, res.articles);
+  articleList = new ArticleList(searchName1.value, articleContainer, res.articles);
   }
   if (res.articles.length > 3){
-         for (let i=0;i<3; i++ ){
-      articleContainer.appendChild((new Article(res.articles[i],false)).createarticle(res.articles[i],false))
-      }
-      document.querySelector('.show-more').classList.remove('display-none')
-      articles = res.articles;
+    articles = [res.articles[0],res.articles[1],res.articles[2] ]
+    articleList = new ArticleList(searchName1.value, articleContainer, articles);
 
+      document.querySelector('.show-more').classList.remove('display-none')
+      //articles = res.articles;
+      lengthArticles = res.articles.length;
+      articlesAll = res.articles;
+      keyWord = searchName1.value;
     }
 
 })
 numb = numb+3;
 })
 showmoreButton.addEventListener('click', function() {
-  lengthArticles = articles.length;
   console.log(lengthArticles,numb)
   if (lengthArticles - numb > 3){
-    for (let i = numb;i<numb+3; i++ ){
-      articleContainer.appendChild((new Article(articles[i],false)).createarticle(articles[i],false))
-      }
+          articles = [articlesAll[numb],articlesAll[numb+1],articlesAll[numb+2]]
+      articleList = new ArticleList(keyWord, articleContainer, articles, keyWord);
       numb = numb+3;
   }
-  else {
+  else if(lengthArticles - numb == 1) {
      document.querySelector('.show-more').classList.add('display-none')
-    for (let i = numb;i <= lengthArticles; i++ ){
-    articleContainer.appendChild((new Article(articles[i],false)).createarticle(articles[i],false))
-    }
+      articles = [articlesAll[numb]]
+      articleList = new ArticleList(keyWord, articleContainer, articles);
   }
+  else if(lengthArticles - numb == 2) {
+    document.querySelector('.show-more').classList.add('display-none')
+     articles = [articlesAll[numb],articlesAll[numb+1] ]
+     articleList = new ArticleList(keyWord, articleContainer, articles);
+ }
+ else if(lengthArticles - numb == 3) {
+  document.querySelector('.show-more').classList.add('display-none')
+   articles = [articlesAll[numb],articlesAll[numb+1],articlesAll[numb+2] ]
+   articleList = new ArticleList(keyWord, articleContainer, articles);
+}
 })
 
 
@@ -460,7 +571,11 @@ enterForm.addEventListener('submit', function(){
 const enterEmail1 = enterForm1.elements.email;
 const enterPassword1 = enterForm1.elements.password;
 
-  api.signin( enterEmail1.value, enterPassword1.value).then((res)=>{console.log(res); localStorage.setItem('token', res.token);});
+  api.signin( enterEmail1.value, enterPassword1.value).then((res)=>{
+    console.log(res); localStorage.setItem('token', res.token);
+}).then(()=>{
+  api.getArticles();
+})
 })
 
 
